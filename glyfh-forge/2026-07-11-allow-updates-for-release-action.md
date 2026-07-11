@@ -1,0 +1,18 @@
+# release-actionで既存Releaseを更新できるようにする
+
+`ncipollo/release-action` は GitHub Release を作れる。
+
+ただし、同じタグの Release が既にある状態で再実行すると、作成ではなく更新が必要になる。
+
+そのために使ったのがこれ。
+
+```yaml
+allowUpdates: true
+```
+
+今回は release job にこの設定を追加した。
+
+目的は、タグを修正したときに既存 Release の更新として扱えるようにすること。
+
+もちろん、タグを何度も動かす運用を推奨するためではない。
+事故ったときに回復できるようにするための小さな保険である。
