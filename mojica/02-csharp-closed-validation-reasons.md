@@ -79,11 +79,11 @@ dotnet build backend\Mojica.Backend.sln `
   --no-restore
 ```
 
-対象テストは成功1件、Skipped 1件、失敗0件だった。Releaseビルドは警告0件、エラー0件で成功した。全体では成功8件、Skipped 33件、失敗0件で、line coverageは96.72%、branch coverageは100%だった。
+この変更時点の対象テストは成功1件、Skipped 1件、失敗0件だった。Releaseビルドは警告0件、エラー0件で成功した。全体では成功8件、Skipped 33件、失敗0件で、line coverageは96.72%、branch coverageは100%だった。その後、Skippedだった`ERROR-02`はADR 0019に従って削除した。
 
 ## 制約と次の課題
 
-`ERROR-02`として計画された「未定義の理由を生成できないこと」のテストはSkippedのままである。通常のユニットテストで存在しない公開APIを証明しようとすると、reflectionで型構造を詳細に検査するテストになりやすい。必要性が高まった場合は、コンパイラーまたはAPI互換性検査の境界で保証する余地がある。
+`ERROR-02`として計画された「未定義の理由を生成できないこと」は、通常のUnit testでは扱わないと決定した。存在しない公開APIを証明しようとするとreflectionで型構造を詳細に検査するテストになりやすいため、Skippedメソッドも残していない。必要性が高まった場合は、コンパイラーまたはAPI互換性検査の境界で保証する余地がある。
 
 また、この変更は検証理由の語彙を用意しただけであり、`ImageType`や文字列Value Objectの具体的な検証処理は実装していない。
 
@@ -100,4 +100,5 @@ dotnet build backend\Mojica.Backend.sln `
 - `backend/Mojica.Api.Tests/Models/ModelValidationReasonTests.cs`
 - `62496e4 test: define closed validation reasons`
 - `808ea38 feat: add closed validation reasons`
-
+- `73d3772 test: remove absent API test plan`
+- ADR 0019「存在しない公開生成経路をランタイムテストで証明しない」
