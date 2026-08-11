@@ -51,4 +51,3 @@ Mojicaの`ERROR-02`は後者だった。存在しない公開生成経路をUnit
 - `ba1cf68 test: remove redundant test plan comments`
 - `2204111 test: remove generated image plan comments`
 - `$HOME/.codex/skills/remove-xunit-test-plan-comments/SKILL.md`
-

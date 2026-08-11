@@ -73,4 +73,3 @@ return imageType is not null;
 - `00e2079 feat: add supported image types`
 - `a8497ee test: reject unsupported image types`
 - `016120d feat: reject unsupported image types`
-
