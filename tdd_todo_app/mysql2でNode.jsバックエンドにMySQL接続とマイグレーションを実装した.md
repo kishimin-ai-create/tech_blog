@@ -1,5 +1,9 @@
 # mysql2 で Node.js バックエンドに MySQL 接続とマイグレーションを実装した
 
+## はじめに
+
+`Boolean(row.completed)` でも変換できるが、`!== 0` の方が意図が明確で安全。
+
 ## 対象読者
 
 - Node.js + TypeScript + Hono でバックエンドを構築しているエンジニア

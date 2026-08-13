@@ -1,6 +1,10 @@
 # hono-openapi の `servers[].url` と `describeRoute` パスが二重になるバグを修正した
 
-## エラー概要
+## 結論
+
+**`servers[].url` + `describeRoute` で登録したパス文字列** として解決する。
+
+## 発生した問題
 
 `hono-openapi` で OpenAPI ドキュメントを生成したとき、Swagger UI の "Try it out" や生成 SDK が
 正しい URL を使わず、`/api/v1/api/v1/apps` のような二重プレフィックスのパスにリクエストを送ってしまう問題が発生していた。
@@ -48,7 +52,7 @@ spec に書き出されるため、`servers.url` 側に `/api/v1` を設定す�
 
 ---
 
-## 修正
+## 解決方法
 
 `servers[].url` を `/api/v1` から `/` に変更する。
 ルートパスにプレフィックスが含まれているので、server URL 側は root だけ示せば十分。

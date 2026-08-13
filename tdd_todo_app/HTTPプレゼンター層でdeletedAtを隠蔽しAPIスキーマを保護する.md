@@ -1,5 +1,9 @@
 # HTTP プレゼンター層：deletedAt を隠蔽し API スキーマを保護する
 
+## はじめに
+
+Clean Architecture では、**internal entity** と **API DTO** が異なる shape を持つ：
+
 ## 対象読者
 
 - Clean Architecture で DTO / presenter 層を実装している

@@ -1,5 +1,9 @@
 # バグ調査で学ぶ React のコンポーネントライフサイクルと key プロップの本当の役割
 
+## はじめに
+
+フォームのリセット忘れ、Jotai の atom への誤った状態保存、あるいはルーティングの実装ミス——原因としていくつかの仮説が考えられる。今回は実際にコードを追いながら、「何が起きているか」「何が起きていないか」を順番に確認した調査プロセスと、その中で見えてきた React のライフサイクルに関する重要な知識を記録する。
+
 ## 対象読者
 
 - React + TypeScript でフロントエンド開発をしている中級者
@@ -272,3 +276,7 @@ it('when switched between Signup and Login pages, then form fields remain indepe
 
 - [React 公式ドキュメント — Preserving and Resetting State](https://react.dev/learn/preserving-and-resetting-state)
 - [React 公式ドキュメント — Rendering Lists: key](https://react.dev/learn/rendering-lists#keeping-list-items-in-order-with-key)
+
+## まとめ
+
+☑ ナビゲーションの「往復」を含む回帰テストが存在するか？

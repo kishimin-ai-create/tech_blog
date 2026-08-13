@@ -1,5 +1,9 @@
 # `wrangler deploy --dry-run`はログイン不要で試せるが、サーバー側の検証は再現しない
 
+## はじめに
+
+`npx wrangler deploy --dry-run`は、Cloudflareへのログインや実際のAPI呼び出しなしに、`wrangler.jsonc`の構文と配信対象アセットの内容をローカルで確認できる。ただし、これはあくまでローカルでの事前確認であり、Cloudflareのサーバー側（API）が行う検証（`_redirects`の構文チェックなど）までは再現しない。ローカルで問題が無くても、実際のデプロイでサーバー側の検証に引っかかることがある。
+
 ## 結論
 
 `npx wrangler deploy --dry-run`は、Cloudflareへのログインや実際のAPI呼び出しなしに、`wrangler.jsonc`の構文と配信対象アセットの内容をローカルで確認できる。ただし、これはあくまでローカルでの事前確認であり、Cloudflareのサーバー側（API）が行う検証（`_redirects`の構文チェックなど）までは再現しない。ローカルで問題が無くても、実際のデプロイでサーバー側の検証に引っかかることがある。
@@ -34,7 +38,7 @@ Line 1: Infinite loop detected in this rule. This would cause a redirect to stri
 
 エラーメッセージにある通り、これはCloudflareのAPI（`/accounts/.../workers/scripts/pi-lab/versions`）へのリクエストが失敗したことによるものである。`--dry-run`の出力ログには`"--dry-run: exiting now."`とあり、このコマンドは実際にAPIへリクエストを送る前の段階で処理を終了している。つまり、`_redirects`の構文検証のようなサーバー側の処理は、`--dry-run`では実行されないため、ローカルでは検出できなかった。
 
-## 学び
+## 学んだこと
 
 - `--dry-run`は「設定ファイルの構文が正しいか」「意図したファイルが対象になっているか」を、ログイン・API呼び出しなしに素早く確認するのに向いている。
 - 一方で、「Cloudflare側が実際に受け入れる内容かどうか」（`_redirects`の妥当性、アカウント固有の制限など）は、`--dry-run`では検証されない。この種の検証はサーバー側で行われるため、実際にデプロイして初めて分かる。
@@ -50,3 +54,7 @@ Line 1: Infinite loop detected in this rule. This would cause a redirect to stri
 - [Cloudflare Workers: Static Assets `_redirects`](https://developers.cloudflare.com/workers/static-assets/redirects/)
 - 根拠コミット: `64d37e9`
 - 確認日: 2026-08-09
+
+## まとめ
+
+`--dry-run`が具体的にどこまでの範囲を検証し、どこから検証しないのかは、公式ドキュメントに包括的な一覧があるわけではなく、今回の1つの事例（`_redirects`検証を再現しなかったこと）から観察した内容に基づく。他の設定項目（`html_handling`の値の妥当性など）が`--dry-run`で検証されるかどうかは未確認である。

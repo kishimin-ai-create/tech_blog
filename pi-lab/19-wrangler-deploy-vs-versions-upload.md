@@ -49,3 +49,7 @@ PRごとに作られるプレビュー環境が、誤って本番に影響を与
 - [Workers CI/CD: Builds Configuration](https://developers.cloudflare.com/workers/ci-cd/builds/configuration/)
 - [Gradual Deployments](https://developers.cloudflare.com/workers/configuration/versions-and-deployments/gradual-deployments/)
 - 確認日: 2026-08-09
+
+## まとめ
+
+ダッシュボード上でどちらのコマンドがどちらのブランチ設定欄に対応しているかは、画面のテキストが報告された順序から推測したものであり、実際のUIレイアウト（スクリーンショット等）で直接確認したわけではない。確実に確認するには、Cloudflareダッシュボードの該当プロジェクト設定画面で、各欄のラベル（「本番ブランチのデプロイコマンド」「プレビューデプロイコマンド」等）を直接確認する必要がある。

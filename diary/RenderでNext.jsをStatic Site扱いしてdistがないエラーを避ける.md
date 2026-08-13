@@ -1,5 +1,9 @@
 # RenderでNext.jsをStatic Site扱いしてdistがないエラーを避ける
 
+## はじめに
+
+原因は、Render 側が frontend を Static Site として扱い、公開ディレクトリに `dist` を期待していたことだった。
+
 ## 対象読者
 
 - Next.js App Router を Render に載せようとしている人
@@ -38,7 +42,7 @@ Route (app)
 
 一方、リポジトリ側の frontend は `next start` で動く前提の Next.js アプリであり、`frontend/Dockerfile` も `.next` と `public` を含めて本番起動する構成になっている。
 
-## 対応
+## 実際にやったこと
 
 `render.yaml` を追加し、frontend/backend をどちらも Docker の Web Service として定義した。
 

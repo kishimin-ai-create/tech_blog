@@ -95,3 +95,7 @@ POMの生成コードが消え、テストには操作と期待結果が残る�
 - [Playwright: Overriding fixtures](https://playwright.dev/docs/test-fixtures#overriding-fixtures)
 - 根拠コミット: `9fc5ee4`
 - 確認日: 2026-08-06
+
+## まとめ
+
+コミット`9fc5ee4`では3つのspecからPOMの重複生成を削除し、fixtureへ一本化した。

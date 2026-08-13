@@ -1,5 +1,9 @@
 # Render で backend ログを出して API 障害を追いやすくする
 
+## はじめに
+
+`createApp()` に logger を注入できるようにし、すべての request に対して完了ログを出す middleware を追加しました。
+
 ## 対象読者
 
 - Render 上で backend の挙動を追いたい人

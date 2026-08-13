@@ -1,5 +1,9 @@
 # Docker環境でDATABASE_URLとJWT_SECRETの起動設定をそろえる
 
+## はじめに
+
+原因は 2 つあった。
+
 ## 対象読者
 
 - Hono + Bun の backend を Docker で動かしている人
@@ -33,7 +37,7 @@ Docker イメージでは `.env` を含めない。これは正しい。秘密�
 
 一方で、実行環境から `DB_HOST` / `DB_NAME` / `DB_USER` / `DB_PASSWORD` のような分割された DB 設定が渡される場合、backend がそれを DSN に変換できないと起動できない。
 
-## 対応
+## 実際にやったこと
 
 `createRuntimeConfig` を、次の順序で DB 接続設定を解決する形にした。
 

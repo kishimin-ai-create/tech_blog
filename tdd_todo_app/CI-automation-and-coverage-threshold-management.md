@@ -1,5 +1,9 @@
 # CI 自動化とカバレッジ閾値管理: 開発フロー最適化への実装アプローチ
 
+## はじめに
+
+4つのコミットが完了した段階で、まだいくつかの CI チェックが失敗していました。**c3693df** コミットで、これらの最終的な問題を解決しました。
+
 ## 対象読者
 
 - CI/CD パイプラインの設計・運用に携わるエンジニア
@@ -376,3 +380,6 @@ Backend Int:  27% lines (target: 80%)  → (integration tests expanding)
 - Playwright ロケーター戦略: https://playwright.dev/docs/locators
 - GitHub Actions workflow 仕様: https://docs.github.com/actions
 
+## まとめ
+
+全体として、**小さな変更** で **大きな開発体験向上** が実現されています。

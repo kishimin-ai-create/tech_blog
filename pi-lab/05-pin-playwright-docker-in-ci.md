@@ -1,5 +1,9 @@
 # PlaywrightのVRT環境をDockerで固定する
 
+## はじめに
+
+プロジェクトのlockfileが解決した`@playwright/test`は1.61.1だった。このためDockerタグも`v1.61.1-noble`へ固定した。
+
 ## 結論
 
 VRTの基準画像をDockerで生成したなら、CIも同じPlaywright Dockerイメージで実行する。OS名がどちらもLinuxでも、ホストイメージ、フォント、システムライブラリが違えば画像差分は発生する。
@@ -52,7 +56,7 @@ Playwright公式ドキュメントは、Dockerイメージとテスト側のPlay
 
 VRTだけを通すためにEdgeプロジェクトを削除すると、テスト範囲が変わってしまう。環境固定とブラウザ範囲維持を別の要件として扱うことが重要だった。
 
-## 検証結果
+## やってみた結果
 
 固定イメージ内でEdgeをインストールし、CI相当の全E2Eを実行した。
 
@@ -75,3 +79,7 @@ Running 20 tests using 1 worker
 - [Playwright: Continuous Integration](https://playwright.dev/docs/ci)
 - 根拠コミット: `e261542`
 - 確認日: 2026-08-06
+
+## まとめ
+
+型検査も成功し、VRTは更新なしで全基準画像と一致した。変更コミットは`e261542`である。

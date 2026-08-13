@@ -1,5 +1,7 @@
 # Claude CodeだけにあるSkillをCodexでも使えるようにする
 
+## はじめに
+
 Claude CodeとCodexを併用していると、片方にだけ追加したSkillがもう片方から見えなくなる。本記事では、Claude側にしかなかったSkillを、共有Skillの正本へ安全に取り込み、Codexから利用可能にした手順を説明する。
 
 対象読者は、`$HOME/.claude/skills`と`$HOME/.agents/skills`をローカルで管理している開発者である。ここでは`$HOME/.agents/skills`を正本とし、コピー元だけにあるディレクトリを削除しない。
@@ -108,5 +110,9 @@ python "$HOME\.codex\skills\.system\skill-creator\scripts\quick_validate.py" `
 1. 正本側のSkillだけを限定してレビュー・コミットする。
 2. 正本からClaude側へ同期し、両者の内容を一致させる。
 3. 再度、相対パスとファイル内容を比較する。
+
+確認日: 2026年8月11日
+
+## まとめ
 
 確認日: 2026年8月11日

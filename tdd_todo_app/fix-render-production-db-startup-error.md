@@ -1,5 +1,7 @@
 # Fix: Render フリープランで本番起動が DB 設定エラーで即クラッシュしていた問題
 
+## 結論
+
 **Date:** 2026-05-11
 **Tech stack:** Node.js · TypeScript · Hono · MySQL2 · Vitest · Render.com
 **Changed files:**
@@ -73,7 +75,7 @@ DB 設定がない Render 環境ではビルドフェーズでも同様にクラ
 
 ---
 
-## Fix
+## 解決方法
 
 ### `backend/src/index.ts` — `resolveApp()` の導入と DB 設定チェック
 

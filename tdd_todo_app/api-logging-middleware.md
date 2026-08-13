@@ -1,5 +1,9 @@
 # API リクエスト/レスポンス ログミドルウェア：TDD 実装ガイド
 
+## はじめに
+
+このミドルウェアは、成功レスポンス（2xx）と全エラー（4xx、5xx）を自動的にログ出力し、API の健全性を追跡可能にします。外部ライブラリに依存せず、シンプルで保守性の高い実装です。
+
 ## 概要
 
 API のデバッグと運用監視は、サーバーサイド開発の重要な側面です。本記事では、**Hono フレームワーク上に実装された API リクエスト/レスポンス ログミドルウェア**の設計と実装を、TDD（Test-Driven Development）アプローチの完全なサイクル（Red → Green → Refactor → Review → Fix）を通じて解説します。
@@ -434,7 +438,7 @@ function logSuccessRequest(method: string, path: string, status: number, elapsed
 
 ---
 
-## 検証結果
+## 動作確認
 
 ### コンパイル・リント
 

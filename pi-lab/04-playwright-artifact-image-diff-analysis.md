@@ -60,3 +60,7 @@ HTMLレポートだけで、使用された実フォント名やOSパッケー�
 - [Playwright: Trace viewer](https://playwright.dev/docs/trace-viewer)
 - [Playwright: Visual comparisons](https://playwright.dev/docs/test-snapshots)
 - 確認日: 2026-08-06
+
+## まとめ
+
+HTMLレポートだけで、使用された実フォント名やOSパッケージを常に確定できるわけではない。必要ならTrace、ブラウザログ、`document.fonts`、コンテナ内のフォント一覧を追加で採取する。

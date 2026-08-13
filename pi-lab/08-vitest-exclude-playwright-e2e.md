@@ -1,5 +1,9 @@
 # VitestからPlaywright E2Eを確実に除外する
 
+## はじめに
+
+独自パターンだけを設定すると、`node_modules`などVitestが通常除外する対象を意図せず収集する可能性がある。既定値へ追加する形なら、標準境界を維持できる。
+
 ## 結論
 
 VitestとPlaywrightを同じリポジトリで使う場合、`e2e/`をVitestの探索対象から明示的に除外する。プロジェクト別設定だけでなく、トップレベルの収集境界にも同じ除外を置く。
@@ -76,7 +80,7 @@ export default mergeConfig(
 
 設定ファイルも実行コードである。型検査から外すと、importや設定APIの変更をCIまで見逃しやすい。
 
-## 検証
+## 実装・検証
 
 コミット`45fda26`で設定を分離し、E2E除外を追加した。Playwright specはPlaywrightだけが、UnitとStorybookはVitestだけが担当する状態になった。
 
@@ -89,3 +93,7 @@ export default mergeConfig(
 - [Vitest: exclude configuration](https://vitest.dev/config/exclude)
 - 根拠コミット: `45fda26`
 - 確認日: 2026-08-06
+
+## まとめ
+
+将来E2Eディレクトリを変更した場合は、Playwrightの`testDir`とVitestの`exclude`を同時に見直す必要がある。ファイル名だけへ依存する除外より、所有ディレクトリで境界を表す方が変更を追跡しやすい。

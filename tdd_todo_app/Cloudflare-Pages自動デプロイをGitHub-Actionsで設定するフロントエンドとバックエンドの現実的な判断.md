@@ -1,5 +1,9 @@
 # Cloudflare Pages 自動デプロイを GitHub Actions で設定する — フロントエンドとバックエンドの現実的な判断
 
+## 結論
+
+[ ] 5. Actions タブで "Deploy frontend to Cloudflare Pages" ワークフローの成功を確認
+
 ## 対象読者
 
 - Vite + React のフロントエンドを Cloudflare Pages にデプロイしたいエンジニア

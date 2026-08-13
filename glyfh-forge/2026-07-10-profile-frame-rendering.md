@@ -1,5 +1,7 @@
 # Glyph Forgeでプロフィール画像のframe_textを読めるようにした
 
+## はじめに
+
 Glyph Forgeでは、`frame_text` の形を `inner_text` で描き、その外側を `outer_text` で埋める画像を生成している。通常のglyph artだけならこの構造は比較的扱いやすいが、Xプロフィール用のアイコン画像や背景画像では、表示サイズと文字密度の都合で `frame_text` が潰れやすい。
 
 今回の修正では、プロフィール画像向けの描画を見直し、`frame_text` を直接描かずに、`inner_text` と `outer_text` の役割を保ったまま可読性を改善した。

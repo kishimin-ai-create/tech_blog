@@ -1,5 +1,7 @@
 # C#で閉じたImageTypeをTryCreateとして実装する
 
+## はじめに
+
 APIが受け取る画像種別を生の文字列のまま運ぶと、未検証値がDomain層より先へ流れやすい。Mojicaでは、仕様で許可された3種類だけを表せる`ImageType`を作り、生成時に未定義値をエラーへ変換した。
 
 ## 任意の文字列とDomain valueを分ける
@@ -56,7 +58,7 @@ return imageType is not null;
 
 この設計が保証するのは、`TryCreate`から得た`ImageType`が定義済み値であることだ。HTTPリクエストで`type`が欠落した場合の`REQUIRED`判定や、画像種別から外部APIのendpointを選ぶ処理は別の境界に残している。
 
-## 検証結果
+## 動作確認
 
 2026年8月11日に`ImageTypeTests`を実行し、成功4件、失敗0件、Skipped 0件を確認した。全体テストは成功12件、失敗0件、Skipped 30件だった。
 

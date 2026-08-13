@@ -1,5 +1,7 @@
 # TDD で認証画面を追加する：Red → Green → Refactor → Review
 
+## はじめに
+
 **対象読者：** TDD を実際の UI 機能——認証フォーム、共有フック、Jotai を使った状態管理——に適用する様子を見たいフロントエンド開発者。
 
 ---
@@ -148,7 +150,7 @@ const { email, setEmail, password, setPassword, error, isSubmitting, handleSubmi
 
 ---
 
-## 最終状態
+## 完成形
 
 - **3つの新規ページ**：`LandingPage`、`LoginPage`、`SignupPage`
 - **1つの共有フック**：`useAuthForm` — 両方のフォームページで使用、ロジックの重複ゼロ
@@ -311,7 +313,7 @@ const { email, setEmail, password, setPassword, error, isSubmitting, handleSubmi
 
 ---
 
-## 最終状態
+## 完成形
 
 - **3 つの新しいページ**: `LandingPage`、`LoginPage`、`SignupPage`
 - **1 共有フック**: `useAuthForm` — 両方のフォーム ページで使用され、ロジックの重複はありません
@@ -327,3 +329,7 @@ const { email, setEmail, password, setPassword, error, isSubmitting, handleSubmi
 2. **リファクタリング段階では設計が行われます。** 2 ページが存在した後で `useAuthForm` を抽出すると、時期尚早な推測ではなく、適切な抽象化が明らかになりました。
 3. **レビュー段階で、テストで見逃した部分が見つかります。** 二重送信のバグと `type="button"` の省略はどちらも、通常のテストでは発生しませんでしたが、敵対的な状況では実際のリスクが発生します。
 4. **動作が正しく見える場合でも、状態の一貫性は重要です。** `currentPageAtom` を `'app-list'` に初期化しても、目に見えるバグは発生しませんでしたが、それは横たわったアトムでした。そして、横たわった状態は、実際のバグになるのを待っている技術的負債です。
+
+## まとめ
+
+`localStorage` / XSS リスク (P2) は認識されましたが、延期されました。仕様では、E2E シード互換性のために `atomWithStorage` が明示的に必要とされているため、`httpOnly` Cookie への移行にはバックエンドの調整が必要であり、既知のリスクとして追跡されます。

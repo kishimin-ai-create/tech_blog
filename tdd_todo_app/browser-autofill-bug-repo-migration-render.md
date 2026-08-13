@@ -1,5 +1,7 @@
 # Devlog 2026-05-10: 幻のバグ—— Chrome オートフィル、リポジトリ移行、Render デプロイの謎
 
+## はじめに
+
 **日付**: 2026-05-10  
 **スタック**: React + TypeScript + Vite + Jotai + Hono + Vitest + Render
 **コミット**: `bc16cad` — `fix: add autoComplete attributes to auth forms to prevent browser autofill`

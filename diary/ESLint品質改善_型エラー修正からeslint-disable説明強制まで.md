@@ -1,5 +1,9 @@
 # ESLint 品質改善：型エラー修正から eslint-disable 説明強制まで
 
+## はじめに
+
+`/// <reference types="..." />` はモジュール解決が整備されていなかった時代の回避策だ。`vitest/config` はそれ自体が `defineConfig` を export している ESM モジュールなので、普通に `import` すればトリプルスラッシュは不要になる。
+
 ## 対象読者
 
 TypeScript + ESLint の flat config を使いはじめたエンジニア。特にモノレポで frontend（Next.js）と backend（Hono/Bun）を同時に整備している開発者。

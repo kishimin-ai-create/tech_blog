@@ -1,5 +1,7 @@
 # ログアウト機能の Playwright E2E テスト
 
+## はじめに
+
 **コミット：** `0b72636` — `test(e2e): add Playwright logout E2E tests`
 **ファイル：** `frontend/e2e/logout.medium.test.ts`
 

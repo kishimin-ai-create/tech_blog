@@ -1,5 +1,9 @@
 # services層統合テストでユースケース実装を検証する
 
+## はじめに
+
+services 層（Interactor / Usecase）の責務：
+
 ## 対象読者
 
 - Clean Architecture の Interactor / Usecase パターンを実装している

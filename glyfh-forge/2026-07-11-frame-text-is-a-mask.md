@@ -1,5 +1,7 @@
 # frame_textは文字として描かない
 
+## はじめに
+
 Glyph Forgeのプロフィール画像では、`frame_text` をそのまま黒文字で描かない。
 
 `frame_text` は、どこに `inner_text` を残すかを決めるためのマスクとして使う。
@@ -18,3 +20,6 @@ Glyph Forgeのプロフィール画像では、`frame_text` をそのまま黒�
 
 `frame_text` は表示する文字ではなく、表示領域を作るための材料。
 
+## まとめ
+
+`frame_text` は表示する文字ではなく、表示領域を作るための材料。

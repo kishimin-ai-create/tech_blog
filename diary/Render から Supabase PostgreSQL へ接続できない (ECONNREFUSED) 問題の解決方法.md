@@ -1,5 +1,9 @@
 # Render から Supabase PostgreSQL へ接続できない (`ECONNREFUSED`) 問題の解決方法
 
+## はじめに
+
+Render からは IPv6 経由で正常に接続できず、結果として接続拒否が発生していました。
+
 ## 対象読者
 
 - Render で Hono / Node.js アプリを運用している方

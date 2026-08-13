@@ -1,5 +1,9 @@
 # MSW v2 と Vitest を統合してコンポーネントテストを整備する
 
+## はじめに
+
+前の工程で [orval](https://orval.dev/) を設定し、OpenAPI 定義書から MSW ハンドラーを自動生成できるようにした。生成された `src/api/generated/index.msw.ts` には `getTDDTodoAppAPIMock()` という関数があり、全エンドポイントのハンドラーをまとめて返す。
+
 ## 対象読者
 
 - React + Vitest でコンポーネントテストを書きたいが、API 呼び出しをどうモックするか迷っている人
@@ -30,7 +34,7 @@
 
 ---
 
-## インストール
+## Installation
 
 ```bash
 npm install -D @testing-library/react jsdom

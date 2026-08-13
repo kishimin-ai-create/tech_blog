@@ -1,5 +1,7 @@
 # Diary Backend API — Comprehensive Failing Test Suite (Red Phase TDD)
 
+## はじめに
+
 TDD の Red フェーズとして、日記バックエンド API の全テストスイートを実装した。
 Hono + TypeScript + Clean Architecture で構成されたバックエンドに対し、
 実装がゼロの状態から網羅的な failing テストを書いた記録。
@@ -275,5 +277,9 @@ backend/src/
 │   └── diary.controller.ts← GET/POST/PUT/DELETE /api/diaries
 └── app.ts                 ← createApp(deps) ファクトリ
 ```
+
+TDD の原則に従い、1 テストずつ Green にしていく。
+
+## まとめ
 
 TDD の原則に従い、1 テストずつ Green にしていく。

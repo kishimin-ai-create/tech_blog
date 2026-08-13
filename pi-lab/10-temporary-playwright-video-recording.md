@@ -1,5 +1,9 @@
 # Playwrightの動画撮影設定を一時利用に限定する
 
+## はじめに
+
+`slowMo`はPlaywright操作を遅くする設定であり、アプリ内タイマーを制御する機能ではない。処理中画面から2秒後に結果へ遷移するシナリオでは、Clockも併用した。
+
 ## 結論
 
 画面遷移のレビュー用動画を一度だけ必要とする場合、恒久的なPlaywright設定として残さない。専用プロジェクトで撮影条件を限定し、動画取得後は設定を撤去して通常のブラウザ行列へ戻す。
@@ -66,3 +70,7 @@ Playwrightの動画はBrowserContextが閉じられた時点で保存される�
 - [Playwright: Videos](https://playwright.dev/docs/videos)
 - [Playwright: Clock](https://playwright.dev/docs/clock)
 - 確認日: 2026-08-06
+
+## まとめ
+
+動画取得後に専用プロジェクトと`testIgnore`を削除し、元のChromium、WebKit、モバイル、Edge構成へ戻した。恒常的な障害解析が目的なら、`video: "retain-on-failure"`または`"on-first-retry"`を検討できるが、今回の一時レビューとは目的が異なる。

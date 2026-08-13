@@ -1,5 +1,9 @@
 # `npm run dev` が `.env` を読み込まない問題を `--env-file-if-exists` で修正した
 
+## 結論
+
+`--env-file-if-exists` は Node.js **22.10 以降**でのみ使用できる。それより古いバージョンでは認識されずエラーになる。
+
 ## 対象読者
 
 - Node.js + tsx でバックエンド開発サーバーを起動している開発者
@@ -8,7 +12,7 @@
 
 ---
 
-## 問題の背景
+## 発生した問題
 
 このプロジェクトでは MySQL の接続情報（`DB_HOST`, `DB_USER`, `DB_PASSWORD` など）を `.env` ファイルで管理している。`npm run migrate` スクリプトには既に `--env-file-if-exists=.env` が付いており、`.env` から環境変数を読み込む仕組みになっていた。
 
@@ -50,7 +54,7 @@ Node.js には似た名前のフラグが2つある。
 
 ---
 
-## 解決策
+## 解決方法
 
 `backend/package.json` の `dev` スクリプトに `--env-file-if-exists=.env` を追加した。
 

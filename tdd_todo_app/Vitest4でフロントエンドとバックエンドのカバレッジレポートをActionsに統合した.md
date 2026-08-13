@@ -1,5 +1,9 @@
 # Vitest 4でフロントエンドとバックエンドのカバレッジレポートをActionsに統合した
 
+## はじめに
+
+この構成にすると、coverage が落ちても artifact upload は実行されます。失敗原因を確認するための HTML/JSON レポートを残せる点が重要です。
+
 ## 対象読者
 
 - React/Vite フロントエンドと Node.js バックエンドを同じリポジトリで管理している人
@@ -27,7 +31,7 @@ coverage reporting の仕様は `docs/spec/features/test-coverage-reporting.md` 
 
 単に `npm run coverage` を追加するだけでは、フロントエンドとバックエンドの出力場所、CI の失敗時の artifact 回収、統合ダッシュボード生成までを扱えません。そこで root scripts、Vitest config、GitHub Actions、集約スクリプトをまとめて整備しました。
 
-## 実装内容
+## Implementation
 
 ### root から coverage を一括実行する
 
@@ -128,7 +132,7 @@ coverage reporting の設定を確認するテストは、frontend と backend �
 
 通常の `npm test` に coverage generation を混ぜると、テスト実行中にさらに Vitest が起動し、タイムアウトや一時ファイル競合の原因になります。coverage の実生成は専用 command と GitHub Actions に寄せ、通常テストでは設定が壊れていないことを確認する役割にしました。
 
-## 注意点
+## よくある問題
 
 `docs/spec/features/test-coverage-reporting.md` には badge 更新や history tracking も将来要件として書かれています。ただし、今回の実装では dashboard generation と artifact upload が中心です。
 

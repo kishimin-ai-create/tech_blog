@@ -1,5 +1,7 @@
 # 公開カタログのテストでreflectionより直接assertionを選ぶ
 
+## はじめに
+
 「定義済みの値をすべて公開しているか」をテストするとき、reflectionやLINQでプロパティ一覧を走査したくなる。しかし、テスト側の処理が複雑になるほど、何を仕様として確認しているのか読み取りにくくなる。本記事では、Mojicaの`ModelValidationReason`テストを直接assertionへ整理した過程と、その適用範囲を説明する。
 
 ## 当初の狙いは閉じた生成経路の検査だった
@@ -71,7 +73,7 @@ reflectionで`.GetProperties()`を呼び、LINQで値を並べ替えて期待配
 
 テスト本文だけでなく、ID、参照先、Given／When／Thenも実際のassertionへ合わせることで、仕様からテストへの追跡可能性を保った。
 
-## 検証結果
+## 動作確認
 
 2026年8月11日に`ModelValidationReasonTests`だけを実行し、成功1件、Skipped 1件、失敗0件を確認した。全体のテストでは成功8件、Skipped 33件、失敗0件だった。
 

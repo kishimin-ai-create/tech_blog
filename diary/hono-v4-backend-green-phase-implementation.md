@@ -1,5 +1,9 @@
 # Hono v4 バックエンド実装 — TDD Green フェーズ完走記録
 
+## はじめに
+
+テスト用のモックリポジトリを注入できるよう DI パターンを採用：
+
 ## 概要
 
 TDD の Red フェーズで書かれた 82 本のテスト（Small 4 ファイル × unit + Medium 2 ファイル × integration）をすべて通す実装を行った。  
@@ -168,5 +172,9 @@ console.log(salt + ':' + hash)
 148 expect() calls
 Ran 82 tests across 6 files.
 ```
+
+TypeScript エラー：0。全テスト通過。
+
+## まとめ
 
 TypeScript エラー：0。全テスト通過。

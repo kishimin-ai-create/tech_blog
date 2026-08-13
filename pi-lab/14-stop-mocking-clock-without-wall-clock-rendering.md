@@ -1,5 +1,9 @@
 # 壁時計に依存しない画面なら、E2EでPage Clockを固定しない
 
+## はじめに
+
+Playwrightの`page.clock`は、実際のタイマーを進めずに待機をスキップできる便利な機能だが、画面が壁時計（実際の日時）に依存する描画を持たないなら、E2Eテストでは使わない方がよい。クロックを操作すると、テストが検証する経路が「実際に2秒待って遷移する」という利用者体験ではなく、「クロックを進めて`setTimeout`をスキップする」というテスト専用の短絡経路にすり替わってしまう。Playwrightの`expect(locator).toBeVisible()`は既定で最大5秒ポーリングして待つため、数秒程度の実待機ならクロック操作なしでも決定的にテストできる。
+
 ## 結論
 
 Playwrightの`page.clock`は、実際のタイマーを進めずに待機をスキップできる便利な機能だが、画面が壁時計（実際の日時）に依存する描画を持たないなら、E2Eテストでは使わない方がよい。クロックを操作すると、テストが検証する経路が「実際に2秒待って遷移する」という利用者体験ではなく、「クロックを進めて`setTimeout`をスキップする」というテスト専用の短絡経路にすり替わってしまう。Playwrightの`expect(locator).toBeVisible()`は既定で最大5秒ポーリングして待つため、数秒程度の実待機ならクロック操作なしでも決定的にテストできる。
@@ -77,7 +81,7 @@ await expect(piMessagePage.messageResult.getMessageResult).toBeVisible();
 
 `vrt.spec.ts`の`Math.random`モック（`page.addInitScript`）はこの変更の対象外とした。こちらは画面に表示される乱数依存の文言をスクリーンショット比較のために固定するためのもので、時刻操作とは目的が異なる。
 
-## 検証結果
+## やってみた結果
 
 削除後、両specともPlaywrightで再実行しGreenを確認した。
 
@@ -91,7 +95,7 @@ $ npx playwright test e2e/specs/vrt.spec.ts --project=chromium
 
 修正コミットは`8cec845`（pi-message.spec.ts）と`5b2a58a`（vrt.spec.ts）である。
 
-## 学び
+## 学んだこと
 
 - `page.clock`のようなタイマー操作APIは、「画面が壁時計に依存する描画を持つ」場合と「相対的なタイマーで画面遷移するだけ」の場合とで、必要性が全く異なる。前者には引き続き必要だが、後者ではPlaywrightの自動待機で十分な場合が多い。
 - 使う前に、対象コードに`Date.now()`・`new Date()`・`toLocaleString`系の呼び出しがあるかをgrepで確認する。なければクロック固定は不要な可能性が高い。
@@ -103,3 +107,7 @@ $ npx playwright test e2e/specs/vrt.spec.ts --project=chromium
 - [Playwright: Auto-waiting](https://playwright.dev/docs/actionability)
 - 根拠コミット: `8cec845`, `5b2a58a`
 - 確認日: 2026-08-07
+
+## まとめ
+
+修正コミットは`8cec845`（pi-message.spec.ts）と`5b2a58a`（vrt.spec.ts）である。

@@ -1,5 +1,9 @@
 # HTTP request validation のエッジケース：100/200字境界と boolean型チェック
 
+## 結論
+
+境界値テスト（on-boundary / off-boundary）は、条件判定のバグを最も効率よく検出できる。
+
 ## 対象読者
 
 - Express / Hono でリクエスト validation を実装している

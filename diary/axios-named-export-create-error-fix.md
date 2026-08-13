@@ -1,5 +1,9 @@
 # `import { create } from "axios"` は無効 — axios.create の正しいインポート方法
 
+## はじめに
+
+Orval が生成した API クライアントのカスタムインスタンスファイル (`frontend/app/api/mutator/custom-instance.ts`) に、次のコードが含まれていた。
+
 ## エラー概要
 
 Orval が生成した API クライアントのカスタムインスタンスファイル (`frontend/app/api/mutator/custom-instance.ts`) に、次のコードが含まれていた。

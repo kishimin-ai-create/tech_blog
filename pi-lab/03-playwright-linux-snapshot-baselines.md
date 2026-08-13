@@ -1,6 +1,10 @@
 # PlaywrightでLinux用の基準画像がないエラーを解決する
 
-## 症状
+## 結論
+
+基準画像生成コマンドが成功しても、それだけでは比較が安定している証明にならない。同じ環境で更新フラグを外して再実行する。
+
+## 発生した問題
 
 WindowsでVRTの基準画像を作ったあと、UbuntuのGitHub Actionsで次のエラーが発生した。
 
@@ -74,3 +78,7 @@ pi-labでは最初にChromiumのLinux基準画像5枚を追加し、更新なし
 - [Playwright: Docker](https://playwright.dev/docs/docker)
 - 根拠コミット: `980aa24`
 - 確認日: 2026-08-06
+
+## まとめ
+
+環境差の原因を隠す可能性がある。まずExpected、Actual、Diffを確認し、同一環境化を検討する。

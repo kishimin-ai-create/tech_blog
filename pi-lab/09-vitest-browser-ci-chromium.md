@@ -1,5 +1,9 @@
 # Vitest Browser ModeのCIにChromiumを導入する
 
+## はじめに
+
+同じエラーでも、原因を次の順で確認するとよい。
+
 ## 症状
 
 Vitest Browser Modeを使うStorybookテストが、GitHub Actionsで次のエラーにより終了した。
@@ -77,3 +81,7 @@ Vitestを実行するjobへ、次のstepを追加した。
 - [Playwright: Continuous Integration](https://playwright.dev/docs/ci)
 - 根拠コミット: `80241cf`
 - 確認日: 2026-08-06
+
+## まとめ
+
+変更は`.github/workflows/frontend-ci.yaml`の3行だけで、コミットは`80241cf`である。アプリ実装やVitest assertionを弱めず、欠けていた実行依存をCIへ追加した。

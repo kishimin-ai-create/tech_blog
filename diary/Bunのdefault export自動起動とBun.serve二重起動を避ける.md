@@ -1,5 +1,9 @@
 # Bunのdefault export自動起動とBun.serve二重起動を避ける
 
+## はじめに
+
+`backend/src/index.ts` が次の 2 つを同時に行っていたことが原因だった。
+
 ## 対象読者
 
 - Bun で Hono アプリを本番起動している人
@@ -26,7 +30,7 @@ code: "EADDRINUSE"
 
 Bun は entrypoint の default export を server config として扱って自動起動できる。そこに手動の `Bun.serve` が加わると、同じ port に対して 2 回 listen しようとして `EADDRINUSE` になる。
 
-## 対応
+## 実際にやったこと
 
 `backend/src/index.ts` から手動 `Bun.serve` を削除し、default export を Bun が読む server config にした。
 

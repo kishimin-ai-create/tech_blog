@@ -1,5 +1,9 @@
 # VRT基準画像の更新で、Dockerのbind mountがWindowsのnode_modulesを壊した話
 
+## はじめに
+
+`playwright-report`のDiff画像を確認すると、差分はロゴ画像の領域だけに集中していた（解析手順は[Playwright Artifactから画像差分の原因を調べる](./04-playwright-artifact-image-diff-analysis.md)と同じ）。モバイル系プロジェクトの方が差分比率が大きいのは、ビューポートに対するロゴの相対サイズが大きいためである。
+
 ## 結論
 
 Docker公式Playwrightイメージで基準画像を再生成するとき、ホストの実プロジェクトディレクトリをそのまま`-v`でbind mountして`npm ci`を実行すると、コンテナ内のLinux版npmがホスト側の`node_modules`をLinux向けに書き換えてしまう。Windows側の`npx`が直後に壊れる。
@@ -120,7 +124,7 @@ $ npx tsc --noEmit
 
 修正コミットは`5700d01`である。
 
-## 学び
+## 学んだこと
 
 - ホストの実ディレクトリをbind mountしたコンテナ内で`npm install`/`npm ci`を実行すると、ホストとコンテナのOSが異なる場合に`node_modules`の実行用シムが壊れる。**基準画像の再生成に必要なのはコンテナ内のPlaywright実行環境であって、`node_modules`のインストール先までホストと共有する必要はない**。
 - 再発防止には、`docker run`時に`node_modules`だけ別の匿名ボリュームへ逃がす（`-v /work/node_modules`を追加してbind mount経路から除外する）か、リポジトリを一時ディレクトリへコピーしてからコンテナに渡す方法が考えられる。今回はまだ未適用であり、次にDockerでVRTを更新する際に検証が必要である。
@@ -138,3 +142,7 @@ $ npx tsc --noEmit
 - [npm docs: bin](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#bin)
 - 根拠コミット: `045a8f4`（workflow_dispatchジョブ追加）、`5700d01`（基準画像更新）
 - 確認日: 2026-08-08
+
+## まとめ
+
+修正コミットは`5700d01`である。

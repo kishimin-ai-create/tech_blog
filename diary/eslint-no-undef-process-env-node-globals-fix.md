@@ -1,5 +1,9 @@
 # ESLint の `no-undef` が `process.env` で誤検知する原因と修正方法 — Flat Config の globals 設定漏れ
 
+## はじめに
+
+`languageOptions.globals` に `globals.node` を追加するだけで解決する。
+
 ## エラー概要
 
 `frontend/` で `bun run lint` を実行すると、`playwright.config.ts` や `vitest.config.ts` といったツール設定ファイルの `process.env` 参照に対して ESLint の `no-undef` エラーが発生していた。

@@ -1,5 +1,9 @@
 # Hono + Bun + MySQL/Drizzle でバックエンド基盤を構築する
 
+## はじめに
+
+**TypeScript をコンパイルなしで実行できる。** `tsc` ビルドステップや `ts-node` が不要で、`bun run src/index.ts` がそのまま動く。CI でのバックエンドビルドステップを削除できた（後述）。
+
 ## 対象読者
 
 - TypeScript でバックエンドを書いているエンジニア

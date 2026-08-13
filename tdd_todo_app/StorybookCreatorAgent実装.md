@@ -1,5 +1,9 @@
 # StorybookCreatorAgent - 自動ストーリー生成エージェントの実装
 
+## はじめに
+
+TDD Todo App に新しいカスタム Copilot エージェント **StorybookCreatorAgent** を実装しました。このエージェントは、React コンポーネントから自動的に包括的な Storybook ストーリーを生成し、CSF 3.0 フォーマット、MSW API モッキング、アクセシビリティ優先設計を実現します。
+
 ## 概要
 
 TDD Todo App に新しいカスタム Copilot エージェント **StorybookCreatorAgent** を実装しました。このエージェントは、React コンポーネントから自動的に包括的な Storybook ストーリーを生成し、CSF 3.0 フォーマット、MSW API モッキング、アクセシビリティ優先設計を実現します。

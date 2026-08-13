@@ -1,5 +1,11 @@
 # Codex CLIのインストールで`Get-FileHash`が見つからないときの切り分け
 
+## 結論
+
+結論から言うと、今回の直接原因は確定していない。現在の端末ではWindows PowerShell 5.1とPowerShell 7.6.4の双方で`Get-FileHash`を利用でき、元のエラーを再現できなかった。したがって、PowerShell 7からの再実行は回避候補であり、検証済みの根本解決ではない。
+
+## はじめに
+
 WindowsでCodex CLIをインストールした際、チェックサム検証で`Get-FileHash`が見つからず終了した事例を整理する。対象は、PowerShellの基本操作ができ、公式インストールスクリプトを使っている開発者である。
 
 結論から言うと、今回の直接原因は確定していない。現在の端末ではWindows PowerShell 5.1とPowerShell 7.6.4の双方で`Get-FileHash`を利用でき、元のエラーを再現できなかった。したがって、PowerShell 7からの再実行は回避候補であり、検証済みの根本解決ではない。
@@ -86,5 +92,9 @@ codex --version
 
 - [OpenAI Codex公式リポジトリのインストール手順](https://github.com/openai/codex#installing-and-running-codex-cli)
 - [OpenAI Codex公式Windowsインストーラー](https://github.com/openai/codex/blob/main/scripts/install/install.ps1)
+
+確認日: 2026年8月11日
+
+## まとめ
 
 確認日: 2026年8月11日

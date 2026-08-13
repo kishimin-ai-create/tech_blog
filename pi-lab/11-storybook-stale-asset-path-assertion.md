@@ -1,5 +1,9 @@
 # StorybookのInteraction Testが古いアセットパスを検証し続けていた話
 
+## はじめに
+
+アセットのファイル形式やパスを変更したら、そのアセットを検証しているテストのアサーションも同じコミットで更新する。pi-labでは、ヘッダーロゴをPNGからSVGへ切り替えたコミットがStorybookのInteraction Testの期待値を更新し忘れ、翌日のCIで無関係に見えるテスト失敗として表面化した。
+
 ## 結論
 
 アセットのファイル形式やパスを変更したら、そのアセットを検証しているテストのアサーションも同じコミットで更新する。pi-labでは、ヘッダーロゴをPNGからSVGへ切り替えたコミットがStorybookのInteraction Testの期待値を更新し忘れ、翌日のCIで無関係に見えるテスト失敗として表面化した。
@@ -61,7 +65,7 @@ await expect(image).toHaveAttribute("src", "/src/assets/pi-lab-logo.png");
 
 `grep -rn "pi-lab-logo.png" src/`で他に参照がないことを確認したうえで、使われなくなった2.1MBの`src/assets/pi-lab-logo.png`も削除した。この削除自体はテスト修正の副次効果であり、修正の主目的ではない。
 
-## 検証結果
+## やってみた結果
 
 ```text
 $ npx vitest run src/components/header.stories.tsx
@@ -75,7 +79,7 @@ $ npx vitest run
 
 `npx eslint`と`npx tsc --noEmit`もエラーなしだった。修正コミットは`896d181`である。
 
-## 学び
+## 学んだこと
 
 - テストが失敗したとき、`Expected`と`Received`のどちらが「あるべき状態」かを先に判断する。今回は`Received`（実際のDOM）の方が正しく、`Expected`（テストの期待値）が古かった。
 - アセットのファイル名や形式を変えるコミットは、そのアセットに依存するテスト・Story・スナップショットを同じコミットでgrepし、漏れなく更新する。
@@ -85,3 +89,7 @@ $ npx vitest run
 
 - 根拠コミット: `db2dabb`（ロゴ切り替え）、`896d181`（本修正）
 - 確認日: 2026-08-07
+
+## まとめ
+
+`npx eslint`と`npx tsc --noEmit`もエラーなしだった。修正コミットは`896d181`である。

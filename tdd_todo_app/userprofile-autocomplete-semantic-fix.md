@@ -1,6 +1,10 @@
 # UserProfilePage の autoComplete 属性を適切なセマンティック値に修正した
 
-## エラー概要
+## 結論
+
+`frontend/src/features/auth/pages/UserProfilePage.tsx` のパスワード・メールフィールドに `autoComplete="off"` が設定されていた。これはブラウザのパスワードマネージャーとの連携を完全に遮断する設定であり、プロフィール編集フォームには適切でなかった。コミット `da7fe67` で正しいセマンティック値に置き換えた。
+
+## 発生した問題
 
 `frontend/src/features/auth/pages/UserProfilePage.tsx` のパスワード・メールフィールドに `autoComplete="off"` が設定されていた。これはブラウザのパスワードマネージャーとの連携を完全に遮断する設定であり、プロフィール編集フォームには適切でなかった。コミット `da7fe67` で正しいセマンティック値に置き換えた。
 
@@ -30,7 +34,7 @@
 
 ---
 
-## 修正内容
+## 解決方法
 
 ### 変更後のコード
 

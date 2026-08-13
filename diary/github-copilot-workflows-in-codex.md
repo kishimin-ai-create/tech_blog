@@ -1,5 +1,9 @@
 # GitHub Copilot 向けの共有エージェント運用を Codex でも使えるようにした話
 
+## はじめに
+
+Codex でも再利用できるようにするための橋渡しでした。
+
 ## 対象読者
 
 - `.github/agents` や `.github/prompts` を使って AI 向けの運用を整理している人

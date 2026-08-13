@@ -1,5 +1,9 @@
 # Playwright Smoke テスト失敗の修正：AppList の表示
 
+## 結論
+
+結果：**2件パス**（`example.spec.ts`、`crud.spec.ts`）。
+
 ## 背景
 
 `frontend/e2e/crud.spec.ts` の Playwright smoke テストが断続的に以下で失敗していました：
@@ -107,5 +111,9 @@ if (!shouldShowAppList) return null
 ```bash
 npx playwright test --grep "@smoke" --project=chromium
 ```
+
+結果: **2 件が合格** (`example.spec.ts`、`crud.spec.ts`)。
+
+## まとめ
 
 結果: **2 件が合格** (`example.spec.ts`、`crud.spec.ts`)。

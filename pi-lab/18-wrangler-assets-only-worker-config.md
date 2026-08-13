@@ -1,5 +1,9 @@
 # Workerスクリプトを書かずに、`wrangler.jsonc`だけで静的SPAをCloudflare Workersへ配信する
 
+## はじめに
+
+Cloudflare Workersは、サーバーサイドのWorkerスクリプト（`main`）を一切書かずに、静的アセットだけを配信する構成をサポートしている。`wrangler.jsonc`の`assets`ブロックに配信対象ディレクトリと未一致パスの扱いを指定するだけで、Viteのようなビルドツールが出力する純粋な静的SPAをそのままデプロイできる。
+
 ## 結論
 
 Cloudflare Workersは、サーバーサイドのWorkerスクリプト（`main`）を一切書かずに、静的アセットだけを配信する構成をサポートしている。`wrangler.jsonc`の`assets`ブロックに配信対象ディレクトリと未一致パスの扱いを指定するだけで、Viteのようなビルドツールが出力する純粋な静的SPAをそのままデプロイできる。
@@ -41,7 +45,7 @@ Cloudflare公式ドキュメント（`developers.cloudflare.com/workers/wrangler
 
 `not_found_handling`を`"single-page-application"`にすると、静的アセットに一致しないあらゆるリクエストに対して`index.html`を200で返す。これが、`react-router`の`BrowserRouter`（History APIベースのクライアントサイドルーティング）を使うSPAで、`/pi-message`のような深いURLへの直接アクセスやリロードを404にしないために必要な設定である。
 
-## 検証
+## 実装・検証
 
 ```text
 $ npx wrangler deploy --dry-run
@@ -65,3 +69,7 @@ Cloudflareへのログインなしに、`wrangler.jsonc`の構文と`dist`ディ
 - [Cloudflare Workers: Wrangler Configuration（`assets`フィールド）](https://developers.cloudflare.com/workers/wrangler/configuration/)
 - 根拠コミット: `64d37e9`
 - 確認日: 2026-08-09
+
+## まとめ
+
+Cloudflareへのログインなしに、`wrangler.jsonc`の構文と`dist`ディレクトリの内容が正しく認識されることを確認できた（`--dry-run`が実際に検証する範囲の限界については[別記事](./20-validate-wrangler-config-with-dry-run.md)で扱う）。

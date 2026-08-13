@@ -1,5 +1,7 @@
 # WindowsからAppRun向けlinux/amd64イメージを作る
 
+## はじめに
+
 開発PCがWindowsでも、デプロイ先と同じOS・CPUアーキテクチャのコンテナイメージを作る必要がある。Glyph Forgeのデプロイ手順では、さくらのクラウドAppRun共用型に合わせて`linux/amd64`を明示した。
 
 ## ビルド対象をコマンドに書く
@@ -41,3 +43,7 @@ docker run --rm -p 8080:8080 --name glyph-forge-local glyph-forge:local
 - `Dockerfile`
 - `README.md`
 - コミット `8a2e29d`、`08983ff`
+
+## まとめ
+
+認証パスワードはコマンド引数、Dockerfile、Git管理ファイルへ書かない。AppRunが非公開レジストリから取得する場合も、push用とpull用の権限を可能な範囲で分ける。

@@ -1,5 +1,7 @@
 # C#で検証理由を閉じた値集合として表現する
 
+## はじめに
+
 APIの検証エラーでは、表示文言とは別に、プログラムが安定して判定できる理由が必要になる。本記事では、Mojicaで文字列コードを`ModelValidationReason`という閉じた値集合へまとめ、Domain ModelからHTTPやローカライズの関心を分離した変更を説明する。
 
 ## 問題：生の文字列は未定義値を表現できる
@@ -64,7 +66,7 @@ Assert.Equal("VISIBLE_CHARACTER_REQUIRED", ModelValidationReason.VisibleCharacte
 
 期待値を文字列リテラルで置くため、プロダクションコードが誤った値へ変わればテストは失敗する。実装から期待値を導出して自己比較するテストにはしていない。
 
-## 検証結果
+## やってみた結果
 
 2026年8月11日に、対象テスト、Releaseビルド、全テストとcoverageを確認した。
 

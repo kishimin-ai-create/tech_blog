@@ -1,5 +1,9 @@
 # テスト設定を触る前に、公式ドキュメントで既定値と用法を確認する
 
+## はじめに
+
+`animations`オプション削除後、`npx eslint`・`npx tsc --noEmit`はエラーなし。`npx playwright test e2e/specs/vrt.spec.ts --project=chromium`は、既存の無関係な差分1件を除きスクリーンショット比較の結果自体に変化がないことを確認した（既定値を明示から省略しただけなので当然ではあるが、実際に確認した）。
+
 ## 結論
 
 「このオプションは本当に必要か」「このやり方は公式に推奨されているか」を判断するとき、記憶や慣習ではなくPlaywright公式ドキュメントを都度確認する。pi-labでは、この確認によって(1)既定値と同じ値を明示していただけの冗長なオプションを1つ削除でき、(2)一見モックに見えるコードが公式ドキュメントの想定用法と一致することを確認できた。
@@ -53,7 +57,7 @@ E2Eテストでの値のモックはケースバイケースで是非が分か�
 
 この確認により、`Math.random`のモックは[別記事](./14-stop-mocking-clock-without-wall-clock-rendering.md)で削除した`page.clock`とは性質が異なる——公式が推奨する用法に沿った、画面の表示内容（乱数依存の文言）を決定的にするための処置である——と判断でき、削除せず維持する判断に根拠を持たせられた。
 
-## 検証結果
+## 動作確認
 
 `animations`オプション削除後、`npx eslint`・`npx tsc --noEmit`はエラーなし。`npx playwright test e2e/specs/vrt.spec.ts --project=chromium`は、既存の無関係な差分1件を除きスクリーンショット比較の結果自体に変化がないことを確認した（既定値を明示から省略しただけなので当然ではあるが、実際に確認した）。
 
@@ -69,3 +73,7 @@ E2Eテストでの値のモックはケースバイケースで是非が分か�
 - [Playwright: page.addInitScript()](https://playwright.dev/docs/api/class-page#page-add-init-script)
 - 根拠コミット: `5b2a58a`
 - 確認日: 2026-08-07
+
+## まとめ
+
+`animations`オプション削除後、`npx eslint`・`npx tsc --noEmit`はエラーなし。`npx playwright test e2e/specs/vrt.spec.ts --project=chromium`は、既存の無関係な差分1件を除きスクリーンショット比較の結果自体に変化がないことを確認した（既定値を明示から省略しただけなので当然ではあるが、実際に確認した）。

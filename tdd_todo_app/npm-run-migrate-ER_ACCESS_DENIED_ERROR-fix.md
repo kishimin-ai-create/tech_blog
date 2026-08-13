@@ -1,6 +1,10 @@
 # `npm run migrate` で発生した `ER_ACCESS_DENIED_ERROR` を `.env` の `--env-file` 読み込みで修正した
 
-## エラーの概要
+## 結論
+
+バックエンドで `npm run migrate` を実行すると、以下のエラーが発生していた。
+
+## 発生した問題
 
 バックエンドで `npm run migrate` を実行すると、以下のエラーが発生していた。
 
@@ -49,7 +53,7 @@ const connection = await createConnection({
 
 ---
 
-## 修正
+## 解決方法
 
 `backend/package.json` のマイグレーションスクリプトを次のように変更した。
 
@@ -101,4 +105,3 @@ const connection = await createConnection({
 3. **Node.js 22 の `--env-file` は依存ゼロの解決策** — Node.js 22 以上であれば、スクリプトで `.env` を読み込むためだけに `dotenv` を導入する必要はない。`--env-file=.env`（または `tsx --env-file=.env`）を渡すだけで、ランタイムがパースを担当する。
 
 4. **環境変数への依存を呼び出し元に明示する** — `--env-file=.env` を npm スクリプトに埋め込むことで、`package.json` のスクリプトブロックにその依存がインラインで文書化され、「このコマンドはローカルの `.env` ファイルが必要」であることが任意のエンジニアにとって明確になる。
-

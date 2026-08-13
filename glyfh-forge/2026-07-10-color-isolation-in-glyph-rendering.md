@@ -1,5 +1,7 @@
 # Glyph Forgeでinner/outerの色混入を防ぐ
 
+## はじめに
+
 Glyph Forgeのプロフィール画像では、`inner_text` と `outer_text` に別々の色を指定できる。
 
 今回の例では、innerとouterに別々の指定色を使った。ここで大事なのは、色が混ざらないことだ。

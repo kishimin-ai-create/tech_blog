@@ -71,11 +71,11 @@ npx playwright test e2e/specs/vrt.spec.ts
 
 差分が出たときに無条件で`--update-snapshots`を実行すると、本物の視覚的回帰まで正解として上書きしてしまう。Expected、Actual、Diffを確認してから更新する。
 
-## 検証結果
+## 比較結果
 
 コミット`b0d093d`で画像添付から画像比較へ移行し、`3bf6d6c`でWindows用の5枚を登録した。その後、対象ブラウザを拡張した最終構成では、固定Linux環境でVRT 5件、全E2E 20件が成功した。
 
-## 制約
+## トレードオフ
 
 ブラウザの描画はOS、ブラウザ版、フォント、headless設定などで変わる。同じ基準画像を異なる環境へ無理に共有せず、生成環境と比較環境を揃える必要がある。
 
@@ -84,3 +84,7 @@ npx playwright test e2e/specs/vrt.spec.ts
 - [Playwright: Visual comparisons](https://playwright.dev/docs/test-snapshots)
 - 根拠コミット: `b0d093d`、`3bf6d6c`
 - 確認日: 2026-08-06
+
+## まとめ
+
+ブラウザの描画はOS、ブラウザ版、フォント、headless設定などで変わる。同じ基準画像を異なる環境へ無理に共有せず、生成環境と比較環境を揃える必要がある。

@@ -1,6 +1,10 @@
 # Windows で生成した package-lock.json が Linux CI で `npm ci` を壊す問題を修正した
 
-## エラー概要
+## 結論
+
+バックエンドの GitHub Actions ワークフロー（ubuntu-latest）で `npm ci` が失敗していました。エラーは `npm ci` が `package.json` と `package-lock.json` の不一致を検出して中断するものです。
+
+## 発生した問題
 
 バックエンドの GitHub Actions ワークフロー（ubuntu-latest）で `npm ci` が失敗していました。エラーは `npm ci` が `package.json` と `package-lock.json` の不一致を検出して中断するものです。
 
@@ -34,7 +38,7 @@ backend/package-lock.json | 105 +++++++++++++++++++++++++++++++++--
 
 Linux・macOS などのエントリが 86 行追加されており、これが欠落していたプラットフォーム固有エントリに相当します。
 
-## 修正
+## 解決方法
 
 `backend/` ディレクトリ内で `npm install` を再実行し、`package-lock.json` を再生成しました。
 

@@ -41,7 +41,7 @@ Workers static assetsの`_redirects`バリデーターが、classic Pagesの定�
 
 Cloudflareのダッシュボード再編（「Workers & Pages」という単独メニューが無くなり、「ビルド」「コンピュート」等のカテゴリに再編された）が、公式ドキュメントの更新より先行しているように見えた。ドキュメント自体は現在も「Workers & Pagesページへ行く」という案内のままで、新しいカテゴリ名（ビルド／コンピュート等）に言及していない。このドキュメントとUIのギャップが、「Pagesのつもりで進めたら実はWorkersだった」という混乱の一因になった可能性がある。これはCloudflare公式ドキュメントには明記されておらず、あくまで観察に基づく推測である。
 
-## 対応
+## 解決方法
 
 `wrangler.jsonc`を新規作成した。
 
@@ -59,7 +59,7 @@ Cloudflareのダッシュボード再編（「Workers & Pages」という単独�
 
 `public/_redirects`は削除した。`public/_headers`は、Workers static assetsでも同一構文でサポートされることを公式ドキュメント（`developers.cloudflare.com/workers/static-assets/headers/`）で確認したうえで、変更せず維持した。
 
-## 検証結果
+## 動作確認
 
 ```text
 $ npx wrangler deploy --dry-run
@@ -98,3 +98,7 @@ Cloudflareダッシュボード上での実際の再デプロイ結果は、本�
 - 根拠コミット: `1bdd484`（Pages想定の初期設定）, `64d37e9`（Workers向け修正）
 - 根拠PR: [#2](https://github.com/kishimin/pi-lab/pull/2), [#3](https://github.com/kishimin/pi-lab/pull/3)
 - 確認日: 2026-08-09
+
+## まとめ
+
+Cloudflareダッシュボード上での実際の再デプロイ結果は、本記事の執筆時点では未確認である。

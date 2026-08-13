@@ -1,5 +1,7 @@
 # Docker DesktopのローカルイメージをDocker Hub経由で別PCへ移す
 
+## はじめに
+
 Docker Desktop内だけにあるイメージは、別PCのDocker Desktopへ自動では同期されない。しかし、Docker Hubへpushすれば、クラウド事業者固有のコンテナRegistryを用意せずに別PCからpullできる。
 
 この記事では、Windows上の`glyph-forge:local`を非公開のDocker Hubリポジトリへ保存し、別PCで取得してFastAPIを呼び出すまでを扱う。コンテナのボリュームや実行中データの移行は対象外とする。

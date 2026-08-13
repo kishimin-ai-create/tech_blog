@@ -1,5 +1,9 @@
 # diary モノレポ全体設計：settings ブランチで整備したプロジェクト基盤
 
+## はじめに
+
+Node.js + npm/yarn の代わりに Bun を選んだ最大の理由は、**TypeScript をコンパイルなしで実行できる**ことだ。バックエンドでは `bun run --hot src/index.ts` で直接起動でき、CI にビルドステップが不要になる。
+
 ## 対象読者
 
 - TypeScript モノレポをゼロから立ち上げたいエンジニア
