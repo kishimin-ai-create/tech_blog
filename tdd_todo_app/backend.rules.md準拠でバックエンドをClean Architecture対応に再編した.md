@@ -1,5 +1,9 @@
 # backend.rules.md に準拠してバックエンドを Clean Architecture 対応に再編した
 
+## 結論
+
+現在の `backend/src/` は、少なくとも観測できる範囲ではこの方針にかなり素直に沿っている。
+
 ## 対象読者
 
 - TypeScript + Hono でバックエンドを書いている人

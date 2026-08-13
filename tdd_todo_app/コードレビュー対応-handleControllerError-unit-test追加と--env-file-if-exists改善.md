@@ -1,5 +1,13 @@
 # コードレビュー対応：`handleControllerError` の unit test 追加と migrate の `.env` 読み込み改善
 
+## 結論
+
+**テスト実行結果:** 全 117 テスト通過。
+
+## はじめに
+
+**テスト実行結果:** 全 117 テスト通過。
+
 ## 背景
 
 `handleControllerError` を `http-presenter.ts` に集約するリファクタリングを行った際、対応する unit test が追加されなかった。コードレビューでこのギャップが P2 として指摘され、あわせて `npm run migrate` の `--env-file` フラグについても改善の余地が見つかった。

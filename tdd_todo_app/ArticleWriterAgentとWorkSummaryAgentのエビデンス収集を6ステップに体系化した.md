@@ -1,5 +1,9 @@
 # ArticleWriterAgentとWorkSummaryAgentのエビデンス収集を6ステップに体系化した
 
+## はじめに
+
+結果として、記事や日報が「今日やった作業の一部しか反映していない」状態になる。
+
 ## 対象読者
 
 - ArticleWriterAgent や WorkSummaryAgent を使って記事・日報を自動生成しているエンジニア

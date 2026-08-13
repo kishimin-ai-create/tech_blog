@@ -1,5 +1,7 @@
 # CI 夜間テスト: ESLint と Playwright セレクタの問題解決
 
+## 結論
+
 **対象読者**: TDD と CI/CD パイプラインに取り組むエンジニア  
 **レポジトリ**: Kazuma-Ishimine/TDD_todo_app  
 **コミット**: c3693df - fix: ensure all CI checks pass  

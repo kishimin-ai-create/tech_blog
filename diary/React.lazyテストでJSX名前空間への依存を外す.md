@@ -1,5 +1,9 @@
 # React.lazyテストでJSX名前空間への依存を外す
 
+## はじめに
+
+該当テストでは、`React.lazy` に渡すための未解決 Promise を用意し、Suspense の fallback 表示を検証していました。その型注釈が `JSX.Element` に依存していたため、環境によって JSX 名前空間を解決できない可能性がありました。
+
 ## 対象読者
 
 - React と TypeScript のテストコードを書いている人
@@ -26,7 +30,7 @@ app/page.small.test.tsx(10,66): error TS2503: Cannot find namespace 'JSX'.
 
 この書き方は、コンポーネントの戻り値を JSX 名前空間で表現します。しかし、このテストで必要なのは「`React.lazy` が受け取れる default export のコンポーネント型」であり、戻り値を `JSX.Element` で直接表す必要はありません。
 
-## 対応
+## 実際にやったこと
 
 `JSX.Element` ではなく、React が提供する `ComponentType` を使うようにしました。
 

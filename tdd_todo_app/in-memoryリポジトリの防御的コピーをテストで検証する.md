@@ -1,5 +1,9 @@
 # in-memory repository の防御的コピーテスト：クローン不変性を検証する
 
+## はじめに
+
+JavaScript / TypeScript ではオブジェクトは参照型である。
+
 ## 対象読者
 
 - in-memory repository を実装している

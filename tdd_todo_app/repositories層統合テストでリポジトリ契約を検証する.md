@@ -1,5 +1,9 @@
 # repositories層統合テストでリポジトリ契約を検証する
 
+## はじめに
+
+リポジトリ層は以下の責務を持つ：
+
 ## 対象読者
 
 - Clean Architecture / Hexagonal Architecture でリポジトリインターフェースを定義している

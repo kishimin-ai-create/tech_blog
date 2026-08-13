@@ -1,5 +1,9 @@
 # Zod の `min(1)` でログインスキーマの空パスワードをバリデーション層で弾く
 
+## はじめに
+
+loginSchema.safeParse() → 成功（min がないので空文字列を通過）
+
 ## 対象読者
 
 - Hono + Zod でバックエンド API を実装しているエンジニア
@@ -8,7 +12,7 @@
 
 ---
 
-## 問題の背景
+## 背景
 
 `backend/src/controllers/auth.controller.ts` のログインスキーマは次のように定義されていた。
 

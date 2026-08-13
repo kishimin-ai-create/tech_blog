@@ -1,12 +1,16 @@
 # PlaywrightのvisualテストをLinuxスナップショット不足とAPIプロキシエラーから安定化した
 
+## 結論
+
+今回の失敗は、1つの visual test に2つの不安定要因が混ざっていたことが原因でした。
+
 ## 対象読者
 
 - Playwright の visual test を GitHub Actions で動かしている人
 - `toHaveScreenshot()` の snapshot 不足で CI が落ちた原因を整理したい人
 - Vite preview 中の API proxy error を E2E test 側で避けたい人
 
-## エラー概要
+## 発生した問題
 
 GitHub Actions で次のコマンドを実行したとき、visual test が失敗しました。
 
@@ -55,7 +59,7 @@ frontend/e2e/visual.spec.ts-snapshots/home-chromium-linux.png
 
 これは Playwright の正常な挙動です。初回の screenshot comparison では、期待画像がない限り比較できません。
 
-## 対応
+## 解決方法
 
 今回の目的は、CI でホーム画面の visual smoke を安定して通すことでした。そのため、`toHaveScreenshot()` による snapshot comparison ではなく、次の確認に切り替えました。
 
@@ -114,7 +118,7 @@ expect(screenshot.byteLength).toBeGreaterThan(0);
 
 現状の `visual.spec.ts` は `RUN_VISUAL_TESTS` に依存せず実行可能です。`PLAYWRIGHT_BASE_URL` は Vite preview の URL を指定するために使われます。
 
-## 確認結果
+## 動作確認
 
 修正後、次のコマンドが通る構成になりました。
 

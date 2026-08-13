@@ -1,5 +1,9 @@
 # pushはユニットテストのみ・PRで統合テストも走らせるCI設計
 
+## 結論
+
+ローカル開発では `test:unit` を使い、PR を出す前に `test:integration` で最終確認するという使い方を想定している。
+
 ## 対象読者
 
 - GitHub Actions で TypeScript バックエンドの CI を組んでいる

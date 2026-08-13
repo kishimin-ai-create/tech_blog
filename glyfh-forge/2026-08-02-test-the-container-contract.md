@@ -1,5 +1,7 @@
 # Dockerfileの本番契約をテストで守る
 
+## はじめに
+
 コンテナ設定はコードではないが、運用上の重要な仕様を持つ。ベースイメージ、実行ユーザー、ポート、起動コマンド、含める依存が変われば、本番の挙動も変わる。
 
 Glyph ForgeではDockerfileを追加する前に、`tests/test_glyph_forge/test_container_config.py`で本番コンテナの契約を定義した。
@@ -41,3 +43,7 @@ Dockerfileが固定したPython 3.12.11 slimイメージを使い、非rootの`a
 - `.dockerignore`
 - `requirements-prod.txt`
 - コミット `bc81a53`、`8a2e29d`、`08983ff`
+
+## まとめ
+
+設定ファイルにもTDDを適用できるが、実環境でしか見えない問題を補う検証層は残しておく必要がある。

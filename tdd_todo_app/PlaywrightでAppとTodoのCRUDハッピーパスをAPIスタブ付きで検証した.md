@@ -1,5 +1,9 @@
 # PlaywrightでAppとTodoのCRUDハッピーパスをAPIスタブ付きで検証した
 
+## はじめに
+
+この記事では、`frontend/e2e/crud.spec.ts` に追加した App と Todo の CRUD ハッピーパステストについて扱います。
+
 ## 対象読者
 
 - Playwright で SPA の主要操作を E2E として検証したい人

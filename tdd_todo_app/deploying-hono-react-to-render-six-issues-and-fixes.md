@@ -1,5 +1,7 @@
 # Hono + React アプリをデプロイしてレンダリングする: 遭遇した 6 つの問題とその解決方法
 
+## 結論
+
 **対象読者**: Node.js + React フルスタック アプリを初めて Render にデプロイし、予想される摩擦点について実践的に説明したいエンジニア。
 
 **スタック**: React + Vite (静的サイト)、Hono + Node.js (Web サービス)、Filess.io 上の MySQL、レンダー ブループリント (`render.yaml`)

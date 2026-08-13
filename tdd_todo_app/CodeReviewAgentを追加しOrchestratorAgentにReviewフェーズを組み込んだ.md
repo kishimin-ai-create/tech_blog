@@ -1,5 +1,9 @@
 # CodeReviewAgent を追加し OrchestratorAgent に Review フェーズを組み込んだ
 
+## はじめに
+
+P1 → P2 → P3 の順に並べることで、読み手が優先度の高い指摘から確認できるよう設計した。
+
 ## 対象読者
 
 - GitHub Copilot のエージェント機能を使って開発フローを自動化したい開発者
@@ -159,7 +163,7 @@ Phase 5: Review Agent Execution
 
 ---
 
-## 注意点
+## よくある問題
 
 - **他のエージェントファイルへの波及確認**  
   OrchestratorAgent に PowerShell 残骸が混入していた原因は過去の編集ミスと思われる。他のエージェントファイルに同様の問題がないか確認しておくことを推奨する。

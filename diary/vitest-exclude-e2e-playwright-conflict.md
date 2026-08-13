@@ -1,5 +1,9 @@
 # VitestがPlaywright E2EテストをピックアップしてCIが落ちた原因と対処
 
+## はじめに
+
+エラーメッセージが示す通り、Playwright 用の `test()` 関数が Playwright ランナー以外の環境（Vitest）から呼び出されたことが原因だ。
+
 ## エラー概要
 
 CI上でフロントエンドの Vitest 実行が次のエラーで失敗するようになった。

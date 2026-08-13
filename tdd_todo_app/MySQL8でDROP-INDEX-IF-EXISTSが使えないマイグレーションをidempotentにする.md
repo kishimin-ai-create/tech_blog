@@ -1,5 +1,9 @@
 # MySQL 8.0 で `DROP INDEX IF EXISTS` が使えないマイグレーションを idempotent にする
 
+## はじめに
+
+PostgreSQL や MariaDB であれば次のように書くだけで解決できる。
+
 ## エラー概要
 
 マイグレーション `003_drop_app_name_unique_index.sql` は当初、次の1行だけだった。

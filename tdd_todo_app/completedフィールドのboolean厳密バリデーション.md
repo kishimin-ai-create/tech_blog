@@ -1,5 +1,9 @@
 # completed フィールドの boolean 厳密バリデーション — typeof で 'yes' や 1 を弾く
 
+## はじめに
+
+`Boolean('yes')` は `true` を返す。`Boolean(0)` は `false` を返す。これでは「文字列や数値でも完了フラグを操作できる」ことになり、API の仕様として曖昧になる。
+
 ## エラーの概要
 
 Todo の `completed` フィールド更新時、`completed: 'yes'` や `completed: 1` のような「truthy な非 boolean」値を受け付けてしまうバグがあった。ユースケース層に渡ってくる値が `boolean` である保証がなく、型定義と実際の動作が乖離していた。

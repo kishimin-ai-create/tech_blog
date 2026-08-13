@@ -1,5 +1,9 @@
 # Zod スキーマをバリデーションと DTO 型の単一情報源にリファクタリングした
 
+## はじめに
+
+この二重管理が発生した根本原因は、**スキーマが単一情報源として使われていなかった** ことにある。
+
 ## 対象読者
 
 - TypeScript + Hono でバックエンド API を実装しているエンジニア
@@ -66,7 +70,7 @@ DRY（Don't Repeat Yourself）原則への違反であり、将来的に：
 
 ---
 
-## 実装の詳細
+## 実装・検証
 
 ### request-validation.ts の変更（122 行 → 53 行）
 
@@ -145,7 +149,7 @@ export const AppDtoSchema = z.object({
 
 ---
 
-## 注意点
+## つまずいたところ
 
 - **`safeParse()` は例外を投げない** — `parse()` と違い、失敗時は `result.success === false` として返る。`parseCreateAppInput` が `AppError` を throw するのは `safeParse` ではなく `toValidationError` の呼び出しによるもの
 - **`body ?? {}`** — `parseUpdateAppInput` と `parseUpdateTodoInput` では body が `null` / `undefined` の場合に空オブジェクトを渡す。これにより「body なし = 全フィールドが optional」という挙動がスキーマ側の `.optional()` で処理される

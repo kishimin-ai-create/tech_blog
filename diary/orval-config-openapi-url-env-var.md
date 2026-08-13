@@ -1,5 +1,9 @@
 # orval.config.ts のハードコード URL を環境変数へ移行した
 
+## はじめに
+
+フロントエンドでは [Orval](https://orval.dev/) を使い、バックエンドの OpenAPI スキーマから TypeScript 型・React Query フック・Zod バリデーターを自動生成している。生成は次のコマンドで実行する。
+
 ## 対象読者
 
 - Orval を使ってフロントエンドの API クライアントを自動生成しているエンジニア
@@ -8,7 +12,7 @@
 
 ---
 
-## 問題の背景
+## 背景
 
 フロントエンドでは [Orval](https://orval.dev/) を使い、バックエンドの OpenAPI スキーマから TypeScript 型・React Query フック・Zod バリデーターを自動生成している。生成は次のコマンドで実行する。
 

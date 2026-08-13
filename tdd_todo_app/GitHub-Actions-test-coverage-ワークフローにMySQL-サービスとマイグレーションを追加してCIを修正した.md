@@ -1,5 +1,9 @@
 # GitHub Actions の test-coverage ワークフローに MySQL サービスとマイグレーションを追加して CI を修正した
 
+## 結論
+
+原因は単純だった。`Run backend integration coverage`（`npm run coverage:integration`）ステップは MySQL に接続して統合テストを実行するが、**ジョブに MySQL サービスコンテナが一切定義されておらず、DB 接続情報の環境変数も渡されていなかった**。
+
 ## 対象読者
 
 - GitHub Actions で統合テストを CI に組み込もうとしているバックエンドエンジニア
@@ -8,7 +12,7 @@
 
 ---
 
-## 問題の背景
+## 発生した問題
 
 `test-coverage.yml` ワークフローの `coverage` ジョブは、毎回 `exit 1` で終了していた。
 
@@ -36,7 +40,7 @@ coverage:integration → MySQL へ接続しようとする
 
 ---
 
-## 修正内容
+## 解決方法
 
 コミット `fix: add MySQL service and migration step to test-coverage workflow`（SHA: `98a7490`）で、`test-coverage.yml` に 41 行を追加した。
 

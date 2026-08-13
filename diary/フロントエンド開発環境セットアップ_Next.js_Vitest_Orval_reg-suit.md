@@ -1,5 +1,9 @@
 # フロントエンド開発環境セットアップ：Next.js + Vitest + Orval + reg-suit の構成と設計判断
 
+## はじめに
+
+データフェッチには **TanStack Query v5** を採用し、API 通信には **axios** を使う。
+
 ## 対象読者
 
 - Next.js プロジェクトのゼロから環境を整えたいエンジニア

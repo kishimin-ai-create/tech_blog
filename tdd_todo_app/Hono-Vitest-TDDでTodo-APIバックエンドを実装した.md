@@ -1,5 +1,9 @@
 # Hono + Vitest で TDD：Todo API バックエンドを Red→Green→Refactor→Review の4フェーズで実装した
 
+## はじめに
+
+// 成功
+
 ## 対象読者
 
 - TypeScript + Hono でバックエンドを書いている、または興味がある人

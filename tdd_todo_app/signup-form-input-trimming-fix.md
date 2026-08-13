@@ -1,5 +1,9 @@
 # サインアップフォーム入力トリミングの一貫性修正
 
+## 結論
+
+**根本原因**: フォーム入力の検証時にメールアドレスはトリミングされていたが、パスワードはトリミングされていなかった
+
 ## 📋 概要
 
 **状況**: 正しいメールアドレスとパスワードでサインアップが失敗する問題
@@ -258,4 +262,8 @@ if (!password.trim()) { /* 拒否される */ }
 
 **コミット**: 3f87efc  
 **ファイル**: `frontend/src/features/auth/hooks/useAuthForm.ts` (2 行修正)  
+**テスト**: `frontend/src/features/auth/pages/SignupPage.test.tsx` (76 行追加)
+
+## まとめ
+
 **テスト**: `frontend/src/features/auth/pages/SignupPage.test.tsx` (76 行追加)

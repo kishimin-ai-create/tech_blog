@@ -1,5 +1,9 @@
 # Render無料プランの寝起きをfrontend retryとhealth endpointで受け止める
 
+## はじめに
+
+一方で、400 などの validation error は retry しません。ユーザー入力やリクエスト内容が原因のエラーを繰り返しても復旧しないためです。
+
 ## 対象読者
 
 - Render の無料プランで backend を動かしている人

@@ -1,5 +1,9 @@
 # controllers層統合テストで HTTP ステータスと DTO 変換を検証する
 
+## はじめに
+
+controller 層の責務：
+
 ## 対象読者
 
 - Clean Architecture で controller 層を実装している

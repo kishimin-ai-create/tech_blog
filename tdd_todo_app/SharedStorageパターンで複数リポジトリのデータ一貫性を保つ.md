@@ -1,5 +1,9 @@
 # Shared Storageパターンで複数リポジトリのデータ一貫性を保つ
 
+## はじめに
+
+これらを解決する設計が **Shared Storage パターン**である。
+
 ## 対象読者
 
 - 複数のリポジトリ（AppRepository / TodoRepository）が存在する設計をしている

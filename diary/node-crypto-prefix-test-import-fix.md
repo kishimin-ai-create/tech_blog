@@ -1,5 +1,9 @@
 # テストの `import "crypto"` を `import "node:crypto"` に修正する
 
+## はじめに
+
+環境では、`node_modules/crypto` が解決先として優先されてしまうリスクがある。
+
 ## 対象読者
 
 - Node.js / Bun でバックエンドを書いているエンジニア
@@ -8,7 +12,7 @@
 
 ---
 
-## 問題の背景
+## 背景
 
 `backend/src/services/auth.service.small.test.ts` に次の import があった。
 

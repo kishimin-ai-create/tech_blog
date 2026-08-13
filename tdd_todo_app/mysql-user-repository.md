@@ -1,5 +1,7 @@
 # サイレントプロダクションのバグの修正: MySQL レジストリに接続されたインメモリ ユーザー リポジトリ
 
+## 結論
+
 **日付:** 2026-05-13
 **コミット:** `0546a19`
 **範囲:** `backend/` — インフラストラクチャ層、移行
@@ -216,7 +218,7 @@ export function createMysqlUserRepository(db: Kysely<Database>): UserRepository 
 
 ---
 
-## テスト結果
+## 動作確認
 
 実装後:
 

@@ -1,6 +1,10 @@
 # `ecosystem.config.cjs` を TypeScript 型情報 ESLint ルールの対象外にしてCIクラッシュを修正した
 
-## エラー概要
+## 結論
+
+ESLint はデフォルトでドット始まりではない `.cjs` ファイルを対象にします。ローカル環境では `eslint.config.mts` の `ignores` に `ecosystem.config.cjs` が含まれていなかったものの、何らかの理由でそのファイルが ESLint の処理対象に入らないケースがあったと考えられます（実行ディレクトリや glob の解決差異など）。CI 上の Linux 環境では確実にスキャン対象になり、クラッシュが顕在化しました。
+
+## 発生した問題
 
 バックエンドの CI で `npm run lint` を実行すると、`ecosystem.config.cjs` の処理時に次のようなエラーが発生してクラッシュしていました。
 
@@ -39,7 +43,7 @@ tseslint.configs.recommendedTypeChecked,
 
 ESLint はデフォルトでドット始まりではない `.cjs` ファイルを対象にします。ローカル環境では `eslint.config.mts` の `ignores` に `ecosystem.config.cjs` が含まれていなかったものの、何らかの理由でそのファイルが ESLint の処理対象に入らないケースがあったと考えられます（実行ディレクトリや glob の解決差異など）。CI 上の Linux 環境では確実にスキャン対象になり、クラッシュが顕在化しました。
 
-## 修正
+## 解決方法
 
 `eslint.config.mts` のグローバル `ignores` 配列に `ecosystem.config.cjs` を追加しました。
 

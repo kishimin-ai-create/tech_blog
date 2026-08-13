@@ -1,5 +1,9 @@
 # CodeReviewAgent 完了後に ReviewResponseAgent を自動起動するルールを追加した
 
+## 結論
+
+このリポジトリでは `CodeReviewAgent` がレビューファイルを `review/` に保存した後、`ReviewResponseAgent` を手動で呼び出してレビュー返信を書いていた。
+
 ## 対象読者
 
 - GitHub Copilot エージェントを活用してレビューフローを自動化したいエンジニア
