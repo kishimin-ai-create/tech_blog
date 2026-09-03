@@ -16,6 +16,9 @@ WindowsでのCodex CLI運用と、Codex・Claude Code間でユーザーSkillを�
 
 - [React Hook Formを機能専用Hookへ切り出す境界を決める](./05-react-hook-form-custom-hook-boundary.md)
 - [React Hook Formの専用Hookをどうテストするか](./06-react-hook-form-hook-test-assertions.md)
+- [Codex CLI更新時の配布元フォールバック警告を抑制する](./07-codex-installer-release-source.md)
+- [Retry-Afterのカウントダウンをコールバック回数ではなく時刻で計算する](./08-retry-countdown-wall-clock.md)
+- [ImageGenerationFormの統合テストをSmallから設計する](./09-image-generation-form-test-plan.md)
 
 ## 共通の前提
 
