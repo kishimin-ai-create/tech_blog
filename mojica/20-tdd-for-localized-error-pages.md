@@ -6,7 +6,7 @@
 
 ## 対象の分離
 
-404画面はルーティングされた存在しないパスの復旧を担当し、ホームへのリンクを提供します。ErrorFallbackはルートErrorBoundaryが捕捉した予期しない例外からの復旧を担当し、Header/Footerを表示せず、ページ再読み込みを提供します。両者を同じテストへ詰め込まず、それぞれの画面の公開された振る舞いを検証しました。
+404画面はルーティングされた存在しないパスの復旧を担当し、ホームへのリンクを提供します。ErrorFallback単体はHeader/Footerを表示せず、ページ再読み込みを提供します。root ErrorBoundaryへの接続は未完了のため、実アプリでの例外捕捉は次の作業です。両者を同じテストへ詰め込まず、それぞれの画面の公開された振る舞いを検証しました。
 
 ## TDDの進め方
 
@@ -23,6 +23,7 @@ NotFoundViewのSmallテストは4件、ErrorFallbackは5件が成功しました
 
 - FACT: 404画面とErrorFallbackの実装・Smallテストを別コミット系列で追加した。
 - FACT: ErrorFallbackは再読み込み実動作のテストを保留している。
+- FACT: `AppProviders`へのroot ErrorBoundary統合と統合テストは未完了である。
 - INFERENCE: 画面ごとの復旧責務を分離すると、ルーティング境界とErrorBoundary境界のテスト重複を避けられる。
 - ASSUMPTION: 実ブラウザでの視覚表示とリロード後の初期表示は未確認である。
 

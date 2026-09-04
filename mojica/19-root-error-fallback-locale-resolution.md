@@ -24,10 +24,12 @@ ErrorFallbackのSmallテストで、日本語・英語の表示、保存ロケ�
 
 ## 事実・判断・未確認事項
 
-- FACT: `ErrorFallback`はHeader/Footerを描画せず、独立した辞書から文言を選択する実装になった。
+- FACT: `ErrorFallback`単体はHeader/Footerを描画せず、独立した辞書から文言を選択する実装になった。
+- FACT: root `ErrorBoundary`への組み込みと、実際の子要素例外からの捕捉は未完了である。
 - FACT: ロケール解決に関するSmallテストは成功した。
 - INFERENCE: Provider障害時の表示継続と、対応言語追加時の分岐増加抑制を両立できる。
 - ASSUMPTION: 実ブラウザでのリロード動作は別環境で確認が必要である。
+- ASSUMPTION: `AppProviders`への接続後に、Provider障害時も表示できることを追加検証する必要がある。
 
 ## 参考
 
