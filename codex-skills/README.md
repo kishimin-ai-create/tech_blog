@@ -24,6 +24,7 @@ WindowsでのCodex CLI運用と、Codex・Claude Code間でユーザーSkillを�
 - [ImageGenerationFormの状態をStorybookで再現可能にする](./12-image-generation-storybook-states.md)
 - [Zodで画像生成フォームのHEXカラー入力を検証する](./13-hex-color-validation-with-zod.md)
 - [ReactフォームのPNG自動ダウンロードをブラウザAPI境界でテストする](./14-testing-browser-download-boundary.md)
+- [StorybookのCanvas余白と本番レスポンシブレイアウトを切り分ける](./23-storybook-canvas-and-responsive-vrt-scope.md)
 
 ## 共通の前提
 
