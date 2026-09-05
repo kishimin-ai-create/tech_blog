@@ -26,6 +26,9 @@ WindowsでのCodex CLI運用と、Codex・Claude Code間でユーザーSkillを�
 - [ReactフォームのPNG自動ダウンロードをブラウザAPI境界でテストする](./14-testing-browser-download-boundary.md)
 - [Playwrightのfixtureと関数形式Page ObjectでE2Eの責務を分離する](./24-playwright-fixture-function-pom.md)
 - [実APIの画像生成E2EでEnter送信を検証する境界を決める](./25-real-api-keyboard-e2e-boundary.md)
+- [ErrorFallbackの日本語・英語StoryをPlaywright VRTで比較する](./26-error-fallback-storybook-vrt-locales.md)
+- [実APIの画像生成E2Eで並列実行とSafariダウンロードを切り分ける](./27-e2e-api-rate-limit-and-safari-download-timeout.md)
+- [Page Objectの関数参照とlocale Selector対応表をLintで守る](./28-eslint-page-object-and-locale-selector-rules.md)
 - [StorybookのCanvas余白と本番レスポンシブレイアウトを切り分ける](./23-storybook-canvas-and-responsive-vrt-scope.md)
 
 ## 共通の前提
