@@ -30,6 +30,7 @@ WindowsでのCodex CLI運用と、Codex・Claude Code間でユーザーSkillを�
 - [実APIの画像生成E2Eで並列実行とSafariダウンロードを切り分ける](./27-e2e-api-rate-limit-and-safari-download-timeout.md)
 - [Page Objectの関数参照とlocale Selector対応表をLintで守る](./28-eslint-page-object-and-locale-selector-rules.md)
 - [StorybookのCanvas余白と本番レスポンシブレイアウトを切り分ける](./23-storybook-canvas-and-responsive-vrt-scope.md)
+- [Playwright E2Eを既存のテストサイズ別CIへ統合する](./29-integrate-playwright-e2e-into-sized-ci.md)
 
 ## 共通の前提
 
