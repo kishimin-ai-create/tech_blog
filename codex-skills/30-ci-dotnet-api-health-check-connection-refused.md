@@ -60,13 +60,13 @@ curl --fail --retry 30 --retry-delay 1 --retry-all-errors http://127.0.0.1:5063/
 
 修正後にローカルで実行したフロントエンド検証は成功した。
 
-| コマンド | 結果 |
-| --- | --- |
-| `bun run typecheck` | pass |
-| `bun run lint` | pass |
-| `bun run test:coverage:pr` | pass（130 tests、Statements 96.64%） |
-| `bunx prettier --check .github/workflows/ci-*.yml` | pass |
-| `git diff --check` | pass |
+| コマンド                                           | 結果                                 |
+| -------------------------------------------------- | ------------------------------------ |
+| `bun run typecheck`                                | pass                                 |
+| `bun run lint`                                     | pass                                 |
+| `bun run test:coverage:pr`                         | pass（130 tests、Statements 96.64%） |
+| `bunx prettier --check .github/workflows/ci-*.yml` | pass                                 |
+| `git diff --check`                                 | pass                                 |
 
 GitHub Actionsは修正コミット`407f116`で再実行中であり、CI上のhealth check成功はこの執筆時点では未確認である。
 
