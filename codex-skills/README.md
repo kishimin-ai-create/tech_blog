@@ -22,6 +22,7 @@ WindowsでのCodex CLI運用と、Codex・Claude Code間でユーザーSkillを�
 - [Blob URLと`download`属性がアプリ内ブラウザーで保証されない理由](./37-blob-download-limitations-in-in-app-browsers.md)
 - [UI変更後にLinux用Visual Regressionベースラインを更新する](./38-update-linux-visual-baselines-after-ui-change.md)
 - [生成画像の種類をダウンロードファイル名で検証する](./39-verify-image-type-in-download-filename.md)
+- [実ファイルを根拠にモノレポのREADMEを整備する](./40-build-an-evidence-based-monorepo-readme.md)
 
 ## 共通の前提
 
