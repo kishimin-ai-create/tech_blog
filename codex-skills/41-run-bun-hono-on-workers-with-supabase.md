@@ -93,7 +93,7 @@ try {
 
 実行基盤の変更とデータ契約の変更を分離できるからである。Workersへの移行とD1への移行を同時に行うと、実行環境、SQL方言、スキーマ、データ移行を一度に扱うことになる。Hyperdriveを境界に置けば、既存の`pg`とDrizzle Repositoryを維持したまま、接続ライフサイクルだけをWorkersへ合わせられる。
 
-マイグレーションもHTTP境界から外した。Worker isolateの生成を「サーバーが一度だけ起動した」と見なせないため、SupabaseのDirect connectionを使う`bun run db:migrate`をデプロイ前に独立して実行する。
+マイグレーションもHTTP境界から外した。Worker isolateの生成を「サーバーが一度だけ起動した」と見なせないため、`bun run db:migrate:runtime`をデプロイ前に独立して実行する。Windows環境ではDirect connectionのIPv6ホストへ接続できなかったため、マイグレーションだけはSession poolerを使用した。Hyperdriveの接続先はDirect connectionのままである。
 
 ## 実装後の結果
 
@@ -106,22 +106,24 @@ try {
 | Line coverage | 89.28% |
 | `wrangler deploy --dry-run` | 成功 |
 | Worker bundle | 1,162.64 KiB、gzip 197.17 KiB |
-| ローカルstartup profile | Active 85.7 ms |
+| ローカルstartup profile | Active 85.1 ms |
+| Supabase migration | DB接続とmigrationが成功 |
+| Workers本番デプロイ | Startup Time 50 msで成功 |
+| `GET /health` | 200、`{"status":"ok"}` |
+| `GET /api/diaries` | 200、既存データを取得 |
 
-本番Hyperdrive IDとSecretsは未設定だったため、Cloudflareへの実デプロイとSupabaseへの本番疎通は未実施である。
+Hyperdrive Bindingと`JWT_SECRET`を設定し、Cloudflare Workersへの実デプロイとSupabaseへの本番疎通まで確認した。測定値は今回のデプロイ時に観測した値であり、継続的な性能保証ではない。
 
 ## トレードオフ・今後の懸念
 
-- Hyperdrive IDと`JWT_SECRET`を本番環境へ設定する必要がある
-- デプロイ前にSupabaseへマイグレーションを適用する必要がある
 - 同期版`scrypt`のCPU時間は実Worker上で計測する必要がある
-- Frontend proxyへWorker URLを`BACKEND_URL`として設定する必要がある
+- Frontend proxyのVercel環境変数へWorker URLを設定したが、Vercelの配信URLは404の調査が継続している
 
 ## まとめ
 
 BunはWorkersと競合するものではなく、開発・テスト・マイグレーションの道具として残せる。本番HTTP境界だけをWorkersへ分離し、Supabase PostgreSQLとの間にHyperdriveを置くことで、既存のHono APIとデータ契約を維持できた。
 
-ただし、dry-runの成功は本番疎通の証明ではない。Hyperdrive、Secrets、マイグレーション、認証の人間レビューと本番スモークテストが残っている。
+dry-runだけで完了とせず、Hyperdrive、Secrets、マイグレーション、本番デプロイ、公開GET APIまで段階的に確認した。管理APIの認証操作とFrontend経由の確認は別途必要である。
 
 ## 参考資料
 

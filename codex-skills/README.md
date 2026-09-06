@@ -25,6 +25,7 @@ WindowsでのCodex CLI運用と、Codex・Claude Code間でユーザーSkillを�
 - [実ファイルを根拠にモノレポのREADMEを整備する](./40-build-an-evidence-based-monorepo-readme.md)
 - [Bunを残したままHono APIをCloudflare Workersへ移す設計](./41-run-bun-hono-on-workers-with-supabase.md)
 - [Wrangler生成Runtime型がBunの型チェックを壊した原因と分離方法](./42-separate-wrangler-runtime-types-from-bun.md)
+- [Supabase Direct connectionでENOTFOUNDになったときのmigration経路](./43-use-supabase-session-pooler-for-local-migrations.md)
 
 ## 共通の前提
 

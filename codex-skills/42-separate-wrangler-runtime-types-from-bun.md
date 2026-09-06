@@ -55,7 +55,7 @@ Worker境界のテストは成功した。一方、全体の型チェックで�
 
 既定の`wrangler types`は、bindingだけでなくWorkers Runtime全体の型を`worker-configuration.d.ts`へ生成する。そのファイルが既存`tsconfig.json`の探索範囲に入り、Bun用コードもCloudflare側のグローバル型で検査されていた。
 
-既存`tsconfig.json`からWorker固有ファイルと生成型を除外し、`tsconfig.workers.json`だけでそれらを読み込むと、既存テストの`Response.json()`エラーは解消した。
+既存`tsconfig.json`からWorker固有ファイルと生成型を除外し、`tsconfig.worker.json`だけでそれらを読み込むと、既存テストの`Response.json()`エラーは解消した。
 
 ### Runtime型全体が必要か確認
 
