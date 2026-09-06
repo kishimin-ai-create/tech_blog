@@ -18,6 +18,8 @@ WindowsでのCodex CLI運用と、Codex・Claude Code間でユーザーSkillを�
 - [Cloudflare PagesでBunプロジェクトの自動npm installが失敗したときの切り分け](./32-cloudflare-pages-bun-lockfile-npm-install-failure.md)
 - [さくらのクラウドAppRunでコンテナレジストリ認証に失敗したときの切り分け](./33-sakura-apprun-registry-authentication.md)
 - [ViteのFrontendをCloudflare Pages、APIをさくらのクラウドAppRunへ分ける判断](./34-cloudflare-pages-and-sakura-apprun.md)
+- [本番E2EでCORS再デプロイと5ブラウザーの画像生成を確認する](./36-validate-production-e2e-after-cors-and-parallelism.md)
+- [Blob URLと`download`属性がアプリ内ブラウザーで保証されない理由](./37-blob-download-limitations-in-in-app-browsers.md)
 
 ## 共通の前提
 
