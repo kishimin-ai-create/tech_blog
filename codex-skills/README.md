@@ -31,6 +31,8 @@ WindowsでのCodex CLI運用と、Codex・Claude Code間でユーザーSkillを�
 - [Page Objectの関数参照とlocale Selector対応表をLintで守る](./28-eslint-page-object-and-locale-selector-rules.md)
 - [StorybookのCanvas余白と本番レスポンシブレイアウトを切り分ける](./23-storybook-canvas-and-responsive-vrt-scope.md)
 - [Playwright E2Eを既存のテストサイズ別CIへ統合する](./29-integrate-playwright-e2e-into-sized-ci.md)
+- [CIのE2Eダウンロードがタイムアウトした原因をAPIレート制限から切り分ける](./31-ci-e2e-download-timeout-rate-limit.md)
+- [認証なしでMojica APIとGlyph Forgeのレート制限を分担する](./32-anonymous-api-rate-limit-boundary.md)
 
 ## 共通の前提
 
