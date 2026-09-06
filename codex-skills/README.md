@@ -23,6 +23,8 @@ WindowsでのCodex CLI運用と、Codex・Claude Code間でユーザーSkillを�
 - [UI変更後にLinux用Visual Regressionベースラインを更新する](./38-update-linux-visual-baselines-after-ui-change.md)
 - [生成画像の種類をダウンロードファイル名で検証する](./39-verify-image-type-in-download-filename.md)
 - [実ファイルを根拠にモノレポのREADMEを整備する](./40-build-an-evidence-based-monorepo-readme.md)
+- [Bunを残したままHono APIをCloudflare Workersへ移す設計](./41-run-bun-hono-on-workers-with-supabase.md)
+- [Wrangler生成Runtime型がBunの型チェックを壊した原因と分離方法](./42-separate-wrangler-runtime-types-from-bun.md)
 
 ## 共通の前提
 
