@@ -20,6 +20,8 @@ WindowsでのCodex CLI運用と、Codex・Claude Code間でユーザーSkillを�
 - [ViteのFrontendをCloudflare Pages、APIをさくらのクラウドAppRunへ分ける判断](./34-cloudflare-pages-and-sakura-apprun.md)
 - [本番E2EでCORS再デプロイと5ブラウザーの画像生成を確認する](./36-validate-production-e2e-after-cors-and-parallelism.md)
 - [Blob URLと`download`属性がアプリ内ブラウザーで保証されない理由](./37-blob-download-limitations-in-in-app-browsers.md)
+- [UI変更後にLinux用Visual Regressionベースラインを更新する](./38-update-linux-visual-baselines-after-ui-change.md)
+- [生成画像の種類をダウンロードファイル名で検証する](./39-verify-image-type-in-download-filename.md)
 
 ## 共通の前提
 
