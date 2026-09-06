@@ -11,6 +11,14 @@ WindowsでのCodex CLI運用と、Codex・Claude Code間でユーザーSkillを�
 - [xUnitのテストケースをコードではなくコメントだけで設計するSkill](./02-comment-only-xunit-skill-design.md)
 - [Claude CodeだけにあるSkillをCodexでも使えるようにする](./03-share-claude-skills-with-codex.md)
 
+## デプロイと運用
+
+- [5並列E2E実行とAPIレート制限を両立する](./30-run-five-e2e-workers-with-a-bounded-api-rate-limit.md)
+- [PlaywrightカバレッジをCIの品質ゲートにしなかった理由](./31-why-playwright-coverage-is-not-a-ci-quality-gate-yet.md)
+- [Cloudflare PagesでBunプロジェクトの自動npm installが失敗したときの切り分け](./32-cloudflare-pages-bun-lockfile-npm-install-failure.md)
+- [さくらのクラウドAppRunでコンテナレジストリ認証に失敗したときの切り分け](./33-sakura-apprun-registry-authentication.md)
+- [ViteのFrontendをCloudflare Pages、APIをさくらのクラウドAppRunへ分ける判断](./34-cloudflare-pages-and-sakura-apprun.md)
+
 ## 共通の前提
 
 - Windows 11
