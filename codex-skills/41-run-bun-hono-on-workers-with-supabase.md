@@ -117,13 +117,13 @@ Hyperdrive Bindingと`JWT_SECRET`を設定し、Cloudflare Workersへの実デ�
 ## トレードオフ・今後の懸念
 
 - 同期版`scrypt`のCPU時間は実Worker上で計測する必要がある
-- Frontend proxyのVercel環境変数へWorker URLを設定したが、Vercelの配信URLは404の調査が継続している
+- Frontend proxyのVercel環境変数へWorker URLを設定し、固定Production Domain経由のAPI応答を確認した
 
 ## まとめ
 
 BunはWorkersと競合するものではなく、開発・テスト・マイグレーションの道具として残せる。本番HTTP境界だけをWorkersへ分離し、Supabase PostgreSQLとの間にHyperdriveを置くことで、既存のHono APIとデータ契約を維持できた。
 
-dry-runだけで完了とせず、Hyperdrive、Secrets、マイグレーション、本番デプロイ、公開GET APIまで段階的に確認した。管理APIの認証操作とFrontend経由の確認は別途必要である。
+dry-runだけで完了とせず、Hyperdrive、Secrets、マイグレーション、本番デプロイ、公開GET API、Frontend proxy経由のGET APIまで段階的に確認した。管理APIの認証操作は別途必要である。
 
 ## 参考資料
 
