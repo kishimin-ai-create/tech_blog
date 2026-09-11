@@ -11,6 +11,15 @@ WindowsでのCodex CLI運用と、Codex・Claude Code間でユーザーSkillを�
 - [xUnitのテストケースをコードではなくコメントだけで設計するSkill](./02-comment-only-xunit-skill-design.md)
 - [Claude CodeだけにあるSkillをCodexでも使えるようにする](./03-share-claude-skills-with-codex.md)
 
+## VS Codeワークスペース
+
+- [VS Codeの既存ウィンドウへフォルダーを追加・削除する](./07-vscode-multi-root-workspace-cli.md)
+
+## API・UI設計
+
+- [ランダム郵便番号APIで「CSVの行」ではなく「一意な郵便番号」を抽選する理由](./08-random-postal-code-selection-unit.md)
+- [地図と広告の障害を主要UIから分離する状態設計](./09-isolate-optional-ui-services.md)
+
 ## 共通の前提
 
 - Windows 11
