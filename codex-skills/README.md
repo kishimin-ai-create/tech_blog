@@ -60,6 +60,11 @@ WindowsでのCodex CLI運用と、Codex・Claude Code間でユーザーSkillを�
 - [Supabase Direct connectionでENOTFOUNDになったときのmigration経路](./43-use-supabase-session-pooler-for-local-migrations.md)
 - [VercelがReadyでも404になるときはFramework Presetを確認する](./44-fix-vercel-ready-deployment-404-with-nextjs-preset.md)
 
+## リリースE2Eとコンテナ容量
+
+- [リリースE2Eのflakyを同時実行数から切り分ける](./04-release-e2e-flaky-concurrency.md)
+- [AppRunとGlyph Forgeの容量設定を分けて考える](./05-apprun-glyph-forge-capacity.md)
+
 ## 共通の前提
 
 - Windows 11
