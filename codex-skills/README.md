@@ -11,6 +11,10 @@ WindowsでのCodex CLI運用と、Codex・Claude Code間でユーザーSkillを�
 - [xUnitのテストケースをコードではなくコメントだけで設計するSkill](./02-comment-only-xunit-skill-design.md)
 - [Claude CodeだけにあるSkillをCodexでも使えるようにする](./03-share-claude-skills-with-codex.md)
 
+## VS Codeワークスペース
+
+- [VS Codeの既存ウィンドウへフォルダーを追加・削除する](./07-vscode-multi-root-workspace-cli.md)
+
 ## 共通の前提
 
 - Windows 11
