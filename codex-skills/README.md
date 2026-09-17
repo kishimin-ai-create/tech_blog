@@ -11,6 +11,8 @@ WindowsでのCodex CLI運用と、Codex・Claude Code間でユーザーSkillを�
 - [xUnitのテストケースをコードではなくコメントだけで設計するSkill](./02-comment-only-xunit-skill-design.md)
 - [Claude CodeだけにあるSkillをCodexでも使えるようにする](./03-share-claude-skills-with-codex.md)
 - [Skillを別のPCへ移植するためのパス監査を作る](./04-portable-skill-paths-audit.md)
+- [AIエージェントの指示修復で、候補を封印してから適用する理由](./45-seal-agent-instruction-repairs-before-apply.md)
+- [CodexとClaude CodeのセッションJSONLを同じ修復フローで扱う](./46-parse-codex-and-claude-session-jsonl.md)
 
 ## React Hook Formとテスト設計
 
