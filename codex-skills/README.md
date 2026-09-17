@@ -62,6 +62,10 @@ WindowsでのCodex CLI運用と、Codex・Claude Code間でユーザーSkillを�
 - [Supabase Direct connectionでENOTFOUNDになったときのmigration経路](./43-use-supabase-session-pooler-for-local-migrations.md)
 - [VercelがReadyでも404になるときはFramework Presetを確認する](./44-fix-vercel-ready-deployment-404-with-nextjs-preset.md)
 
+## Python設定境界
+
+- [Pydanticの`SecretStr`だけではDB URLを検証できない](./45-validate-secret-database-url.md)
+
 ## リリースE2Eとコンテナ容量
 
 - [リリースE2Eのflakyを同時実行数から切り分ける](./04-release-e2e-flaky-concurrency.md)
