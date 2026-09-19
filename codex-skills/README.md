@@ -5,6 +5,8 @@ WindowsでのCodex CLI運用と、Codex・Claude Code間でユーザーSkillを�
 ## インストールとトラブルシュート
 
 - [Codex CLIのインストールで`Get-FileHash`が見つからないときの切り分け](./01-codex-get-filehash-install-error.md)
+- [Qiita Previewで記事APIが500になる：タイトル内のコロンをYAMLとして扱う](./47-qiita-preview-yaml-colon-front-matter.md)
+- [Qiita Previewの`localeCompare`例外を直す：テンプレートを`public`の外へ置く](./48-qiita-preview-localecompare-undefined.md)
 
 ## Skill設計と共有
 
