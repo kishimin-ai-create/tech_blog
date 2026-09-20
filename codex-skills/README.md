@@ -71,7 +71,8 @@ WindowsでのCodex CLI運用と、Codex・Claude Code間でユーザーSkillを�
 ## MySQL migration
 
 - [MySQL Error 1553をAlembicの制約変更順序から直す](./56-mysql-foreign-key-index-migration-order.md)
-- [GTID付きMySQL dumpを復元してAlembic migrationのデータ保持を検証する](./57-verify-alembic-migration-with-restored-mysql-data.md)
+- [GTID付きMySQL dumpを同一サーバーへ復元できないときの対処](./57-restore-mysql-dump-without-gtid-conflict.md)
+- [復元したMySQL DBでAlembic migrationのデータ保持を検証する](./58-verify-alembic-migration-data-preservation.md)
 
 ## リリースE2Eとコンテナ容量
 
