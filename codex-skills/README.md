@@ -68,6 +68,11 @@ WindowsでのCodex CLI運用と、Codex・Claude Code間でユーザーSkillを�
 
 - [Pydanticの`SecretStr`だけではDB URLを検証できない](./45-validate-secret-database-url.md)
 
+## MySQL migration
+
+- [MySQL Error 1553をAlembicの制約変更順序から直す](./56-mysql-foreign-key-index-migration-order.md)
+- [GTID付きMySQL dumpを復元してAlembic migrationのデータ保持を検証する](./57-verify-alembic-migration-with-restored-mysql-data.md)
+
 ## リリースE2Eとコンテナ容量
 
 - [リリースE2Eのflakyを同時実行数から切り分ける](./04-release-e2e-flaky-concurrency.md)
