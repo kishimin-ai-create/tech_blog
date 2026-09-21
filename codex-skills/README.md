@@ -13,6 +13,8 @@ WindowsでのCodex CLI運用と、Codex・Claude Code間でユーザーSkillを�
 - [xUnitのテストケースをコードではなくコメントだけで設計するSkill](./02-comment-only-xunit-skill-design.md)
 - [Claude CodeだけにあるSkillをCodexでも使えるようにする](./03-share-claude-skills-with-codex.md)
 - [Skillを別のPCへ移植するためのパス監査を作る](./04-portable-skill-paths-audit.md)
+- [`ui-ux-pro-max`を共有Skillとして導入する](./69-install-ui-ux-pro-max-as-shared-skill.md)
+- [`everything-claude-code`をClaude Codeのユーザープラグインとして導入する](./70-install-everything-claude-code-plugin.md)
 - [AIエージェントの指示修復で、候補を封印してから適用する理由](./45-seal-agent-instruction-repairs-before-apply.md)
 - [CodexとClaude CodeのセッションJSONLを同じ修復フローで扱う](./46-parse-codex-and-claude-session-jsonl.md)
 
