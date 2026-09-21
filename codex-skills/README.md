@@ -81,6 +81,7 @@ WindowsでのCodex CLI運用と、Codex・Claude Code間でユーザーSkillを�
 - [収集境界のリトライと失敗通知をモックHTTPで統合テストする](./65-slope-collector-reliability-integration-test.md)
 - [空のMySQLへAlembicを適用し初期スキーマを検証する](./66-slope-collector-empty-mysql-migration.md)
 - [外部取得を行わずにAPI・systemd・設定境界を検証する](./67-slope-collector-deployment-verification-boundaries.md)
+- [FastAPIプロジェクトのREADMEでAPIと運用境界を分けて説明する](./68-slope-collector-readme-runtime-boundaries.md)
 
 ## リリースE2Eとコンテナ容量
 
