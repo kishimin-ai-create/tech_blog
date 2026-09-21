@@ -78,6 +78,9 @@ WindowsでのCodex CLI運用と、Codex・Claude Code間でユーザーSkillを�
 
 - [スクレイパーの一時的な失敗を指数バックオフで再試行する](./59-slope-collector-exponential-backoff.md)
 - [スクレイパーの失敗通知から本文と完全レスポンスを除外する](./60-slope-collector-sanitized-failure-reporting.md)
+- [収集境界のリトライと失敗通知をモックHTTPで統合テストする](./65-slope-collector-reliability-integration-test.md)
+- [空のMySQLへAlembicを適用し初期スキーマを検証する](./66-slope-collector-empty-mysql-migration.md)
+- [外部取得を行わずにAPI・systemd・設定境界を検証する](./67-slope-collector-deployment-verification-boundaries.md)
 
 ## リリースE2Eとコンテナ容量
 
