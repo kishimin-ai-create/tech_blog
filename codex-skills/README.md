@@ -74,6 +74,11 @@ WindowsでのCodex CLI運用と、Codex・Claude Code間でユーザーSkillを�
 - [GTID付きMySQL dumpを同一サーバーへ復元できないときの対処](./57-restore-mysql-dump-without-gtid-conflict.md)
 - [復元したMySQL DBでAlembic migrationのデータ保持を検証する](./58-verify-alembic-migration-data-preservation.md)
 
+## slope-collectorの収集信頼性
+
+- [スクレイパーの一時的な失敗を指数バックオフで再試行する](./59-slope-collector-exponential-backoff.md)
+- [スクレイパーの失敗通知から本文と完全レスポンスを除外する](./60-slope-collector-sanitized-failure-reporting.md)
+
 ## リリースE2Eとコンテナ容量
 
 - [リリースE2Eのflakyを同時実行数から切り分ける](./04-release-e2e-flaky-concurrency.md)
