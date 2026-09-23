@@ -77,6 +77,7 @@ WindowsでのCodex CLI運用と、Codex・Claude Code間でユーザーSkillを�
 - [MySQL Error 1553をAlembicの制約変更順序から直す](./56-mysql-foreign-key-index-migration-order.md)
 - [GTID付きMySQL dumpを同一サーバーへ復元できないときの対処](./57-restore-mysql-dump-without-gtid-conflict.md)
 - [復元したMySQL DBでAlembic migrationのデータ保持を検証する](./58-verify-alembic-migration-data-preservation.md)
+- [PowerShell経由のMySQL更新で日本語が文字化けしたときの切り分け](./75-mysql-powershell-utf8mb4.md)
 
 ## slope-collectorの収集信頼性
 
@@ -86,11 +87,17 @@ WindowsでのCodex CLI運用と、Codex・Claude Code間でユーザーSkillを�
 - [空のMySQLへAlembicを適用し初期スキーマを検証する](./66-slope-collector-empty-mysql-migration.md)
 - [外部取得を行わずにAPI・systemd・設定境界を検証する](./67-slope-collector-deployment-verification-boundaries.md)
 - [FastAPIプロジェクトのREADMEでAPIと運用境界を分けて説明する](./68-slope-collector-readme-runtime-boundaries.md)
+- [収集処理の内部キーとDB表示名を分離してチェックポイントを守る](./74-slope-collector-configured-source-names.md)
+- [一覧APIへ本文を追加するときに詳細レスポンスとの重複を防ぐ](./76-slope-collector-record-list-body.md)
 
 ## リリースE2Eとコンテナ容量
 
 - [リリースE2Eのflakyを同時実行数から切り分ける](./04-release-e2e-flaky-concurrency.md)
 - [AppRunとGlyph Forgeの容量設定を分けて考える](./05-apprun-glyph-forge-capacity.md)
+
+## Git・GitHub運用
+
+- [リモートブランチ削除後にGitのpullとPublishが失敗する理由](./77-git-stale-remote-tracking-ref.md)
 
 ## 共通の前提
 
