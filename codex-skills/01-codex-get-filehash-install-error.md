@@ -2,13 +2,41 @@
 
 ## 結論
 
-結論から言うと、今回の直接原因は確定していない。現在の端末ではWindows PowerShell 5.1とPowerShell 7.6.4の双方で`Get-FileHash`を利用でき、元のエラーを再現できなかった。したがって、PowerShell 7からの再実行は回避候補であり、検証済みの根本解決ではない。
+結論から言うと、2026年8月の調査では直接原因を再現できなかった。一方、2026年9月23日に同じ症状が再発し、インストーラー実行中のPowerShellが`Get-FileHash`を解決できず、ラッパーコマンドが終了コード1になったことは確認できた。PowerShellのバージョンやモジュール探索状態が未確認のため、根本原因と解決方法はまだ確定していない。
+
+## 2026年9月23日の再発記録
+
+ユーザーから、次のコマンドが終了コード1で失敗したと報告された。
+
+```powershell
+powershell -ExecutionPolicy Bypass -c '$env:CODEX_NON_INTERACTIVE=1; irm https://chatgpt.com/codex/install.ps1 | iex'
+```
+
+提示されたログでは、インストーラーの217行目22文字目付近で、アーカイブのハッシュ計算に使う`Get-FileHash`が解決されていなかった。
+
+```text
++     $actualDigest = (Get-FileHash -LiteralPath $ArchivePath -Algorith ...
++                      ~~~~~~~~~~~~
++ CategoryInfo          : ObjectNotFound: (Get-FileHash:String) [], ParentContainsErrorRecordException
++ FullyQualifiedErrorId : CommandNotFoundException
+```
+
+この出力から、今回の失敗は`$ArchivePath`の存在確認より前に、PowerShellのコマンド解決で発生したと判断できる。ただし、実行環境の`$PSVersionTable`、`Get-Command Get-FileHash`、モジュール探索パスはまだ取得できていない。
+
+次に確認すべき情報は次のとおりである。
+
+```powershell
+$PSVersionTable
+Get-Command Get-FileHash -All
+```
+
+`pwsh`または`powershell`を明示した再実行は候補であるが、今回のログだけでは復旧を確認できない。再実行後は、インストーラーの全文、終了コード、`codex --version`を記録する。
 
 ## はじめに
 
 WindowsでCodex CLIをインストールした際、チェックサム検証で`Get-FileHash`が見つからず終了した事例を整理する。対象は、PowerShellの基本操作ができ、公式インストールスクリプトを使っている開発者である。
 
-結論から言うと、今回の直接原因は確定していない。現在の端末ではWindows PowerShell 5.1とPowerShell 7.6.4の双方で`Get-FileHash`を利用でき、元のエラーを再現できなかった。したがって、PowerShell 7からの再実行は回避候補であり、検証済みの根本解決ではない。
+2026年8月11日の調査では、Windows PowerShell 5.1とPowerShell 7.6.4の双方で`Get-FileHash`を利用でき、元のエラーを再現できなかった。2026年9月23日の再発ではコマンド未解決と終了コード1を確認できたが、実行環境の診断情報が不足しているため、根本原因と解決方法はまだ確定していない。
 
 ## 発生した症状
 
@@ -93,8 +121,8 @@ codex --version
 - [OpenAI Codex公式リポジトリのインストール手順](https://github.com/openai/codex#installing-and-running-codex-cli)
 - [OpenAI Codex公式Windowsインストーラー](https://github.com/openai/codex/blob/main/scripts/install/install.ps1)
 
-確認日: 2026年8月11日
+確認日: 2026年8月11日、追記確認日: 2026年9月23日
 
 ## まとめ
 
-確認日: 2026年8月11日
+確認日: 2026年8月11日、追記確認日: 2026年9月23日
