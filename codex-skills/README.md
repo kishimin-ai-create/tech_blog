@@ -69,6 +69,7 @@ WindowsでのCodex CLI運用と、Codex・Claude Code間でユーザーSkillを�
 ## Python設定境界
 
 - [Pydanticの`SecretStr`だけではDB URLを検証できない](./45-validate-secret-database-url.md)
+- [`MeCab`が見つからない原因を`pip`と`python`の不一致から切り分ける](./72-mecab-python-interpreter-mismatch.md)
 
 ## MySQL migration
 
