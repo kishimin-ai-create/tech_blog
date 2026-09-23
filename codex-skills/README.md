@@ -70,6 +70,7 @@ WindowsでのCodex CLI運用と、Codex・Claude Code間でユーザーSkillを�
 
 - [Pydanticの`SecretStr`だけではDB URLを検証できない](./45-validate-secret-database-url.md)
 - [`MeCab`が見つからない原因を`pip`と`python`の不一致から切り分ける](./72-mecab-python-interpreter-mismatch.md)
+- [`%matplotlib inline`で`Expected expression`になる原因と実行環境の分け方](./73-matplotlib-inline-python-syntax-error.md)
 
 ## MySQL migration
 
