@@ -74,7 +74,7 @@ APIログでは旧Glyph Forge revisionへの呼び出しがHTTP 429になって�
 - 成功実行と失敗実行でアプリケーションSHAが同じであることを確認した。
 - runner imageのリリースノートでブラウザーのバージョン差を確認した。
 - 差分画像を更新し、ローカルの対象iPhone Safari E2Eを2件実行して成功した。
-- 修正後のGitHub Actions全体はまだ実行されていない。
+- PR #45のGitHub Actions 11 checksはすべて成功し、Frontend E2E (Medium)も成功した。Nightly固有workflowの再実行は未確認。
 - Windowsのローカル全E2Eでは別のプラットフォーム画像比較が6件失敗しており、今回のLinux baseline更新の検証とは区別している。
 
 ## 学び
