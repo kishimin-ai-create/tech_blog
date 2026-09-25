@@ -99,6 +99,10 @@ WindowsでのCodex CLI運用と、Codex・Claude Code間でユーザーSkillを�
 
 - [リモートブランチ削除後にGitのpullとPublishが失敗する理由](./77-git-stale-remote-tracking-ref.md)
 
+## CI・Visual Regression
+
+- [GitHub ActionsでVRTが突然失敗したら、ubuntu-latestのブラウザー更新を確認する](./78-ubuntu-runner-browser-drift-breaks-vrt.md)
+
 ## 共通の前提
 
 - Windows 11
