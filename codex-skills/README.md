@@ -10,6 +10,7 @@ WindowsでのCodex CLI運用と、Codex・Claude Code間でユーザーSkillを�
 
 ## Skill設計と共有
 
+- [テスト設計Skillは判断と実行の責務を分ける](./79-test-skill-responsibilities.md)
 - [xUnitのテストケースをコードではなくコメントだけで設計するSkill](./02-comment-only-xunit-skill-design.md)
 - [Claude CodeだけにあるSkillをCodexでも使えるようにする](./03-share-claude-skills-with-codex.md)
 - [Skillを別のPCへ移植するためのパス監査を作る](./04-portable-skill-paths-audit.md)
