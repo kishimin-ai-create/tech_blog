@@ -105,6 +105,12 @@ WindowsでのCodex CLI運用と、Codex・Claude Code間でユーザーSkillを�
 
 - [GitHub ActionsでVRTが突然失敗したら、ubuntu-latestのブラウザー更新を確認する](./78-ubuntu-runner-browser-drift-breaks-vrt.md)
 
+## Jest・Testing Library
+
+- [Jestテストの補完が出ない原因は継承された`exclude`だった](./81-jest-tests-excluded-by-inherited-tsconfig.md)
+- [Git管理外でJestをwatchする：npm 12では`npx jest --watchAll`を使う](./82-run-jest-watch-without-git-under-npm12.md)
+- [`user.type`の`act`警告を依存パッケージの解決先から直す](./83-fix-act-warning-from-parent-user-event.md)
+
 ## 共通の前提
 
 - Windows 11
