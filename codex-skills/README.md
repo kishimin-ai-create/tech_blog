@@ -6,6 +6,8 @@ WindowsでのCodex CLI運用と、Codex・Claude Code間でユーザーSkillを�
 
 - [Codex CLIのインストールで`Get-FileHash`が見つからないときの切り分け](./01-codex-get-filehash-install-error.md)
 - [Codex CLIの同一バージョン更新成功ではダウンロードを検証できない](./80-codex-update-no-op-does-not-verify-download.md)
+- [WindowsでCodexの余分なターミナルを`--no-daemon`で切り分ける](./86-codex-no-daemon-windows-terminal.md)
+- [PowerShellでCodexを毎回`--no-daemon`で起動する](./87-codex-powershell-no-daemon-profile.md)
 - [Qiita Previewで記事APIが500になる：タイトル内のコロンをYAMLとして扱う](./47-qiita-preview-yaml-colon-front-matter.md)
 - [Qiita Previewの`localeCompare`例外を直す：テンプレートを`public`の外へ置く](./48-qiita-preview-localecompare-undefined.md)
 
