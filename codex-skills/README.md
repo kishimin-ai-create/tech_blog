@@ -123,3 +123,10 @@ WindowsでのCodex CLI運用と、Codex・Claude Code間でユーザーSkillを�
 - 2026年8月11日時点のCodex CLIインストーラーとローカルSkill構成
 
 Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再確認する必要がある。
+
+## 画像APIと変更範囲の振り返り
+
+- [画像APIの分離とimport時の実行を整理する](./89-wordcloud-image-api-contracts.md)
+- [アップロードのサイズ上限をread前の境界テストで確認する](./90-upload-size-boundary-before-read.md)
+- [API変更で依頼されていない構造変更を戻した記録](./91-preserve-layout-in-scoped-api-changes.md)
+- [PRコメントの英訳で対象と完了条件を取り違えない](./92-edit-existing-pr-replies-in-english.md)
