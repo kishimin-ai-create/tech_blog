@@ -130,3 +130,9 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 - [アップロードのサイズ上限をread前の境界テストで確認する](./90-upload-size-boundary-before-read.md)
 - [API変更で依頼されていない構造変更を戻した記録](./91-preserve-layout-in-scoped-api-changes.md)
 - [PRコメントの英訳で対象と完了条件を取り違えない](./92-edit-existing-pr-replies-in-english.md)
+
+## Docker実行と接続先の切り分け
+
+- [uvでFastAPIをDocker化するときの配置とビルドコンテキスト](./93-docker-context-ignore-and-uv-build.md)
+- [Dockerのenv-fileでURLに引用符が残った原因と対応](./94-docker-env-file-url-quotes.md)
+- [コンテナの127.0.0.1でcollectorへ接続できなかった原因](./95-container-loopback-and-local-collector.md)
