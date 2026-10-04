@@ -95,6 +95,7 @@ WindowsでのCodex CLI運用と、Codex・Claude Code間でユーザーSkillを�
 - [FastAPIプロジェクトのREADMEでAPIと運用境界を分けて説明する](./68-slope-collector-readme-runtime-boundaries.md)
 - [収集処理の内部キーとDB表示名を分離してチェックポイントを守る](./74-slope-collector-configured-source-names.md)
 - [一覧APIへ本文を追加するときに詳細レスポンスとの重複を防ぐ](./76-slope-collector-record-list-body.md)
+- [スクレイピング結果を個人識別子なしで報告する](./88-scraper-run-report-without-person-identifiers.md)
 
 ## リリースE2Eとコンテナ容量
 
