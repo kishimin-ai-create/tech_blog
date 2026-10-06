@@ -142,3 +142,13 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 - [HonoをBunで起動する最小バックエンド](./96-hono-bun-backend-starter.md)
 - [Biomeのpreset設定エラー](./97-biome-unsupported-preset.md)
 - [Bunのテスト件数とHTTP契約](./98-bun-zero-tests-and-root-contract.md)
+
+## アーカイブ補完と検証の境界
+
+- [取得元が変わっても元の識別キーで重複を防ぐ](./99-archive-recovery-original-checkpoints.md)
+- [保存時の名前補正では遅い：照合前に取得元を解決する](./100-source-rename-before-checkpoint-lookup.md)
+- [総ページ数0なのに記事がある応答を拒否する](./101-zero-page-archive-contract.md)
+- [全件取得では記事IDの集合を比べる](./102-backfill-verify-identifier-sets.md)
+- [運用の件数確認だけならAPI契約を増やさない](./103-verify-counts-without-expanding-api.md)
+- [JSON取得でも既存の通信制限を引き継ぐ](./104-reuse-bounded-json-transport.md)
+- [除外を通信とDB更新より前に判定する](./105-exclusions-before-side-effects.md)
