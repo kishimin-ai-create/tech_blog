@@ -136,3 +136,9 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 - [uvでFastAPIをDocker化するときの配置とビルドコンテキスト](./93-docker-context-ignore-and-uv-build.md)
 - [Dockerのenv-fileでURLに引用符が残った原因と対応](./94-docker-env-file-url-quotes.md)
 - [コンテナの127.0.0.1でcollectorへ接続できなかった原因](./95-container-loopback-and-local-collector.md)
+
+## Hono・Bunの開発設定
+
+- [HonoをBunで起動する最小バックエンド](./96-hono-bun-backend-starter.md)
+- [Biomeのpreset設定エラー](./97-biome-unsupported-preset.md)
+- [Bunのテスト件数とHTTP契約](./98-bun-zero-tests-and-root-contract.md)
