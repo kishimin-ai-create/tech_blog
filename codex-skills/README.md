@@ -152,3 +152,11 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 - [運用の件数確認だけならAPI契約を増やさない](./103-verify-counts-without-expanding-api.md)
 - [JSON取得でも既存の通信制限を引き継ぐ](./104-reuse-bounded-json-transport.md)
 - [除外を通信とDB更新より前に判定する](./105-exclusions-before-side-effects.md)
+
+## 履歴取得の追加対応とコンテナ検証
+
+- [対象の同一性を保ちながら過去の記事ID衝突を防ぐ](./106-archive-record-key-namespaces.md)
+- [アーカイブ取得の404と解析失敗を処理段階で分ける](./107-archive-failure-stage-diagnosis.md)
+- [HTTPS境界を維持してアーカイブの画像参照を回復する](./108-explicit-archive-image-recovery.md)
+- [CLIの取得元を追加するときに選択肢と既定値を分ける](./109-optional-source-cli-defaults.md)
+- [Docker更新後の収集コマンドを実行環境と設定から検証する](./110-docker-collector-runtime-smoke.md)
