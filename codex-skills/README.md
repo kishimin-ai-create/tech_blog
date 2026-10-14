@@ -160,3 +160,9 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 - [HTTPS境界を維持してアーカイブの画像参照を回復する](./108-explicit-archive-image-recovery.md)
 - [CLIの取得元を追加するときに選択肢と既定値を分ける](./109-optional-source-cli-defaults.md)
 - [Docker更新後の収集コマンドを実行環境と設定から検証する](./110-docker-collector-runtime-smoke.md)
+
+## 公式HTMLの解析失敗と並列取得の待機
+
+- [file画像だけを除外して記事本文を保存する](./111-omit-device-local-images-without-losing-articles.md)
+- [同じ著者へのリンクが2個あると解析に失敗した理由](./112-duplicate-author-links-and-parser-ambiguity.md)
+- [並列取得の30分待機は開始時刻ではなく全員の終了から測る](./113-batch-cooldown-after-collection-completion.md)
