@@ -166,3 +166,8 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 - [file画像だけを除外して記事本文を保存する](./111-omit-device-local-images-without-losing-articles.md)
 - [同じ著者へのリンクが2個あると解析に失敗した理由](./112-duplicate-author-links-and-parser-ambiguity.md)
 - [並列取得の30分待機は開始時刻ではなく全員の終了から測る](./113-batch-cooldown-after-collection-completion.md)
+
+## Mojicaの日本語VRTとE2Eコンテナ環境
+
+- [日本語画面だけVRTが落ちたらブラウザとフォントを揃える](./114-japanese-vrt-rendering-environment.md)
+- [E2Eをコンテナへ移すときにAPI接続とレポート回収を揃える](./115-container-e2e-api-and-report-boundaries.md)
