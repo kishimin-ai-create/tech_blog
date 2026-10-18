@@ -182,3 +182,13 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 ## Dependabotによるツールチェーン更新
 
 - [QualityとTestが成功してもDockerのuv更新が失敗した理由](./120-uv-container-update-required-version.md)
+
+## Honoの外部API境界とOpenAPIの調査
+
+- [Bunで環境変数が未定義になったら起動ディレクトリを確認する](./121-bun-env-working-directory.md)
+- [Honoのc.jsonへPromiseを渡していた型エラーを切り分ける](./122-await-json-before-hono-response.md)
+- [Zodで受信するsnake_caseを検証してcamelCaseへ変換する](./123-zod-transform-upstream-field-names.md)
+- [Honoで画像とJSONを返すルートの型検査が不整合を見逃した理由](./124-openapi-image-response-type-check-gap.md)
+- [OpenAPIのsourceIdでqueryとpathが競合したエラーを読む](./125-openapi-parameter-location-conflict.md)
+- [画像APIのプロキシで上流のエラーを200 PNGにしない](./126-preserve-upstream-image-errors.md)
+- [response.textを渡すとJSONのmessageが消えた理由](./127-response-text-method-and-error-body.md)
