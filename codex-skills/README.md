@@ -178,3 +178,7 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 - [作業ブランチのupstreamがorigin/mainになった記録](./117-work-branch-tracking-origin-main.md)
 - [指定されたuvをuvxから呼び出して検証する](./118-project-uv-version-with-uvx.md)
 - [起動済みMySQLへローカル限定のAdminerを接続する](./119-local-adminer-on-compose-network.md)
+
+## Dependabotによるツールチェーン更新
+
+- [QualityとTestが成功してもDockerのuv更新が失敗した理由](./120-uv-container-update-required-version.md)
