@@ -85,11 +85,11 @@ docker build --tag slope-collector:pr36-verified .
 
 既存のContainerジョブが今回の不整合を検出できていたため、同じ値を比較するだけの新規テストは追加しなかった。依存ツールを更新するときは、イメージタグだけでなく、それを利用するプロジェクトの要求も確認する。
 
-この時点で確認できたのは修正前のCI失敗と、修正後のローカル検証である。修正コミットのPR反映と、そのSHAでのCI成功は公開後に別途確認する。別PRのPython更新や、アプリケーションのAPI修正は混ぜていない。
+修正コミットをPR #36のheadへpushし、リモートSHAの一致を確認した。そのSHAを対象とする[CI run 39103182273](https://github.com/kishimin/slope-collector/actions/runs/39103182273)も成功した。ローカル成功とGitHub上の成功は、別々の結果として確認した。別PRのPython更新や、アプリケーションのAPI修正は混ぜていない。PRのmainへのマージは行っていない。
 
 ## 根拠
 
 - [失敗したCI run 38813344494](https://github.com/kishimin/slope-collector/actions/runs/38813344494)
 - [PR #36](https://github.com/kishimin/slope-collector/pull/36)のDockerfile差分
-- ローカル修正コミット：`c66655d318de8cf8bf37e25eb6a2c437168f403a`
+- [修正コミット c66655d](https://github.com/kishimin/slope-collector/commit/c66655d318de8cf8bf37e25eb6a2c437168f403a)
 - 対象：`Dockerfile`、`pyproject.toml`、`.github/workflows/ci.yml`
