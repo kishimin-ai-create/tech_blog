@@ -197,3 +197,7 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 
 - [uvのDockerタグを固定し、実際に使われる版を確認する](./136-pin-uv-and-verify-container-version.md)
 - [ビルド済みDockerイメージでpytestを動かすための前提を揃える](./137-run-pytest-in-built-container.md)
+
+## ツール更新と実行環境・Skillの確認
+
+- [Windowsのuv更新ではPATH上の複数インストールを確認する](./142-windows-uv-multiple-installations.md)
