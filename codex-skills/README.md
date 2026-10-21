@@ -205,3 +205,4 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 - [BunのアプリでもPythonサービスのビルドにuvが使われていた](./144-bun-app-python-uv-build-boundary.md)
 - [XAMPPのPHPを設定と拡張を維持してセキュリティ更新する](./145-xampp-php-security-update.md)
 - [DiscordのWebhook投稿を定期タスクの設定から読み戻す](./146-discord-webhook-message-from-scheduled-task.md)
+- [プロンプト棚卸しの9候補を新規2件と既存6件のSkillへ整理した](./147-prompt-inventory-skill-reuse-and-validation.md)
