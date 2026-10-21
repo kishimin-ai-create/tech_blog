@@ -192,3 +192,7 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 - [OpenAPIのsourceIdでqueryとpathが競合したエラーを読む](./125-openapi-parameter-location-conflict.md)
 - [画像APIのプロキシで上流のエラーを200 PNGにしない](./126-preserve-upstream-image-errors.md)
 - [response.textを渡すとJSONのmessageが消えた理由](./127-response-text-method-and-error-body.md)
+
+## uvの固定とコンテナ検証
+
+- [uvのDockerタグを固定し、実際に使われる版を確認する](./136-pin-uv-and-verify-container-version.md)
