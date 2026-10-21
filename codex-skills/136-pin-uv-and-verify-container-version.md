@@ -34,7 +34,7 @@ docker run --rm blog-wordcloud-analysis:uv-0.13.4 uv --version
 
 ### 固定した版で既存テストも確認する
 
-ビルド済みイメージへtestsを読み取り専用でマウントし、ダミーの必須設定を与えて15テストが成功しました。statement coverageは96.71%で、プロジェクトの80%基準を満たしました。テストの実行時には、プロジェクトのimport経路と必須設定を明示しました。
+ビルド済みイメージへtestsを読み取り専用でマウントし、ダミーの必須設定を与えて15テストが成功しました。statement coverageは96.71%で、プロジェクトの80%基準を満たしました。具体的なテスト実行条件は[Docker内のpytest検証](./137-run-pytest-in-built-container.md)へ分けています。
 
 ## つまずいたところ
 

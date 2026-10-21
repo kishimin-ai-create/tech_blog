@@ -196,3 +196,4 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 ## uvの固定とコンテナ検証
 
 - [uvのDockerタグを固定し、実際に使われる版を確認する](./136-pin-uv-and-verify-container-version.md)
+- [ビルド済みDockerイメージでpytestを動かすための前提を揃える](./137-run-pytest-in-built-container.md)
