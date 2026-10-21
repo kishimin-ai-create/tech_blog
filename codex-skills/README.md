@@ -201,3 +201,4 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 ## ツール更新と実行環境・Skillの確認
 
 - [Windowsのuv更新ではPATH上の複数インストールを確認する](./142-windows-uv-multiple-installations.md)
+- [uvのイメージ更新と稼働コンテナへの適用を分けて確認する](./143-apply-verified-uv-image-without-recreating-db.md)
