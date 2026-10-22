@@ -216,3 +216,9 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 - [Pillowで絵文字が四角になる原因を、書記素とフォントに分けて調べる](./149-pillow-grapheme-emoji-font-selection.md)
 - [絵文字フォントを同梱しても、Pillowの結合絵文字には実行時の文字組み機能が必要だった](./150-pillow-raqm-fribidi-runtime.md)
 - [カバレッジに80%と表示されても、分岐が80%以上とは限らなかった](./151-coverage-unrounded-branch-threshold.md)
+
+## リリースの識別と公開後の確認
+
+- [FastAPIのAPIバージョンをインストール済みパッケージと揃える](./152-fastapi-installed-package-version.md)
+- [公開サイトの画像生成を、ダウンロード成功と画素の両方で確認する](./153-public-generated-image-pixel-verification.md)
+- [PR本文の一時Markdownは、公開内容を確認してから削除する](./154-remove-pr-draft-after-publication-verification.md)
