@@ -226,3 +226,7 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 ## APIリポジトリの案内先
 
 - [GitHubに載せるAPI URLは、読者の使い方から決める](./155-github-api-url-and-reader-entrypoint.md)
+
+## frontendの本番ビルドとPRレビュー対応
+
+- [Storybookが成功しても本番ビルドが失敗した理由](./156-storybook-success-and-production-build.md)
