@@ -230,3 +230,4 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 ## frontendの本番ビルドとPRレビュー対応
 
 - [Storybookが成功しても本番ビルドが失敗した理由](./156-storybook-success-and-production-build.md)
+- [Storybookは動くのに未使用React importで本番ビルドが止まった](./157-unused-react-imports-with-automatic-jsx.md)
