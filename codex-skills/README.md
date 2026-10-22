@@ -210,3 +210,9 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 ## 開発ブランチへのmain取り込み
 
 - [mainの変更を開発ブランチへ取り込み、履歴とファイル内容を確認する](./148-main-merge-ancestry-and-content-verification.md)
+
+## glyph-forgeの絵文字描画とカバレッジ判定
+
+- [Pillowで絵文字が四角になる原因を、書記素とフォントに分けて調べる](./149-pillow-grapheme-emoji-font-selection.md)
+- [絵文字フォントを同梱しても、Pillowの結合絵文字には実行時の文字組み機能が必要だった](./150-pillow-raqm-fribidi-runtime.md)
+- [カバレッジに80%と表示されても、分岐が80%以上とは限らなかった](./151-coverage-unrounded-branch-threshold.md)
