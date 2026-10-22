@@ -222,3 +222,7 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 - [FastAPIのAPIバージョンをインストール済みパッケージと揃える](./152-fastapi-installed-package-version.md)
 - [公開サイトの画像生成を、ダウンロード成功と画素の両方で確認する](./153-public-generated-image-pixel-verification.md)
 - [PR本文の一時Markdownは、公開内容を確認してから削除する](./154-remove-pr-draft-after-publication-verification.md)
+
+## APIリポジトリの案内先
+
+- [GitHubに載せるAPI URLは、読者の使い方から決める](./155-github-api-url-and-reader-entrypoint.md)
