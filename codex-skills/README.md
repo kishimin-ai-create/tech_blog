@@ -264,3 +264,4 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 - [日本の日付をUTCとして検索すると朝の記事が漏れた原因](./168-japanese-calendar-dates-and-utc-query-bounds.md)
 - [有効な日付でもUTC変換でOverflowErrorになった原因](./169-timezone-conversion-datetime-limits.md)
 - [著者ごとの全件取得へ日付条件を統合し、片側だけの指定も受け付ける](./170-integrate-optional-dates-into-entity-records.md)
+- [日付条件を持つ稼働APIの結果を、実MySQLのID列と順序まで照合する](./171-verify-running-date-filters-against-mysql.md)
