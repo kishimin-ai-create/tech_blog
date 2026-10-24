@@ -246,3 +246,14 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 - [Figmaにダウンロードボタンを追加しても、画像保存機能は実装されない](./164-figma-download-button-and-runtime-boundary.md)
 - [受け入れテストのレビューで、期待結果とテストデータの具体化を分ける](./165-acceptance-outcomes-and-test-data.md)
 - [StorybookのブラウザーテストとPlaywright Testを分けて導入する](./166-storybook-and-playwright-test-runners.md)
+
+## blog-wordcloudのworkspaceとCI整備
+
+- [Gitの著者情報を直すとき、設定と履歴とリモートを分けて確認する](./128-git-author-rewrite-and-tree-verification.md)
+- [ReactとHonoの型チェックをパッケージごとに分離する](./129-isolate-react-hono-typescript-projects.md)
+- [TypeScriptのコンパイラーとESLintが使うAPIを別々に確認する](./130-typescript-compiler-and-eslint-api-versions.md)
+- [型情報を使うESLintルールとテストルールの対象範囲を揃える](./131-scope-typed-eslint-and-test-rules.md)
+- [Bun workspaceのCIを分けてもインストールはworkspaceルートで行う](./132-split-bun-workspace-ci-by-responsibility.md)
+- [Storybookの静的ビルドとVitestブラウザテストを独立してCIで実行する](./133-storybook-build-and-vitest-ci.md)
+- [WorkflowのYAML整形とActionsの静的検査を別々に確認する](./134-workflow-yaml-format-and-actionlint.md)
+- [package.jsonとlockfileが混在した変更を目的ごとにコミットする](./135-split-manifest-lockfile-commits.md)
