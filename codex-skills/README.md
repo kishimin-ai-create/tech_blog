@@ -263,3 +263,4 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 - [期間内の記事を全件返すために専用APIを追加した理由](./167-complete-date-range-api-without-changing-pagination.md)
 - [日本の日付をUTCとして検索すると朝の記事が漏れた原因](./168-japanese-calendar-dates-and-utc-query-bounds.md)
 - [有効な日付でもUTC変換でOverflowErrorになった原因](./169-timezone-conversion-datetime-limits.md)
+- [著者ごとの全件取得へ日付条件を統合し、片側だけの指定も受け付ける](./170-integrate-optional-dates-into-entity-records.md)
