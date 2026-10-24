@@ -240,3 +240,9 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 - [メンテナンスからの復旧はHTTP 200だけで判定せず、一覧と記事を解析する](./161-detect-recovery-by-parsing-list-and-article.md)
 - [復旧確認中の手動停止を、古い成功結果で解除しない](./162-reject-stale-recovery-results.md)
 - [復旧確認を1分間隔にすると実行が重なった原因と修正](./163-prevent-overlapping-recovery-checks.md)
+
+## Kotogumoのデザインとブラウザーテスト
+
+- [Figmaにダウンロードボタンを追加しても、画像保存機能は実装されない](./164-figma-download-button-and-runtime-boundary.md)
+- [受け入れテストのレビューで、期待結果とテストデータの具体化を分ける](./165-acceptance-outcomes-and-test-data.md)
+- [StorybookのブラウザーテストとPlaywright Testを分けて導入する](./166-storybook-and-playwright-test-runners.md)
