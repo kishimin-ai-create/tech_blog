@@ -77,3 +77,5 @@
 - slope-collectorの`d7f4e85`、`app/api/records.py`、`tests/medium/test_record_date_range.py`。
 - 最終検証：全278テスト成功。19ケースが新しいAPIの契約を確認した。
 - [日本時間の日付境界の修正](./168-japanese-calendar-dates-and-utc-query-bounds.md)。
+
+- [実装とテストを含むPR #42](https://github.com/kishimin/slope-collector/pull/42)。

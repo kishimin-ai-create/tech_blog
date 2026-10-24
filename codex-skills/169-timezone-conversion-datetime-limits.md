@@ -62,3 +62,5 @@ OverflowError: date value out of range
 - slope-collectorの`ba8c3be`、`3dd4c4e`。
 - `tests/medium/test_record_date_range.py`の最小・最大日付のHTTP検証。
 - [日本の暦日を検索境界へ変換した経緯](./168-japanese-calendar-dates-and-utc-query-bounds.md)。
+
+- [実装とテストを含むPR #42](https://github.com/kishimin/slope-collector/pull/42)。

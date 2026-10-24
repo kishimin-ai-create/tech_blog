@@ -66,3 +66,5 @@ start = datetime.combine(
 - slope-collectorの`79fd62c`が失敗する境界テスト、`a647170`が修正。
 - `app/scraping/adapter.py`の既存時刻解析、`app/api/records.py`の検索条件。
 - [全件取得APIを分けた設計](./167-complete-date-range-api-without-changing-pagination.md)。
+
+- [実装とテストを含むPR #42](https://github.com/kishimin/slope-collector/pull/42)。
