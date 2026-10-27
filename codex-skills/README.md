@@ -265,3 +265,15 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 - [有効な日付でもUTC変換でOverflowErrorになった原因](./169-timezone-conversion-datetime-limits.md)
 - [著者ごとの全件取得へ日付条件を統合し、片側だけの指定も受け付ける](./170-integrate-optional-dates-into-entity-records.md)
 - [日付条件を持つ稼働APIの結果を、実MySQLのID列と順序まで照合する](./171-verify-running-date-filters-against-mysql.md)
+
+## profile-hubの公開サイト基盤とレビュー練習
+
+- [レビュー練習用の変更を、小さな積み上げPRとして渡す](./172-small-stacked-prs-for-review-practice.md)
+- [二つの入口を持つサイトで、共通レイアウトと専用Heroの境界を決める](./173-section-owned-navigation-and-heroes.md)
+- [React 19のメタデータを使い、末尾スラッシュまでページ情報を揃える](./174-react19-route-metadata-and-trailing-slashes.md)
+- [TanStack QueryのstatusとfetchStatusを分けて読み込み状態を表示する](./175-query-status-and-fetch-status-feedback.md)
+- [Orvalの生成成功を、型チェックと再試行の動作確認につなげる](./176-orval-generation-compile-and-retry-check.md)
+- [Storybookのビルド成功後に、未配置のMSW Workerで表示が止まった](./177-static-storybook-msw-worker-registration.md)
+- [workspace内のPrettierが生成物を処理するときは実行場所から除外を確認する](./178-prettier-workspace-generated-output-ignore.md)
+- [SPAの画面遷移後に本文へフォーカスを移し、初回読み込みは維持する](./179-spa-navigation-main-focus.md)
+- [WebKitのTab失敗を、リンクへの到達とEnterでの実行に分けて調べる](./180-webkit-keyboard-activation-test-boundary.md)
