@@ -290,3 +290,4 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 - [Argon2idのパスワード処理をログイン機能と区別する](./188-argon2id-password-hash-is-not-login.md)
 - [JWTの必須クレーム検証と失効管理を分けて考える](./189-jwt-required-claims-versus-revocation.md)
 - [カバレッジ100%でも読み込まれていないファイルがあった](./190-bun-coverage-loaded-schema-boundary.md)
+- [JWTの失効判定をセッションバージョンとDB照合に分ける](./191-session-version-revocation-boundaries.md)
