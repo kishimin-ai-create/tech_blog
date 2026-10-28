@@ -277,3 +277,16 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 - [workspace内のPrettierが生成物を処理するときは実行場所から除外を確認する](./178-prettier-workspace-generated-output-ignore.md)
 - [SPAの画面遷移後に本文へフォーカスを移し、初回読み込みは維持する](./179-spa-navigation-main-focus.md)
 - [WebKitのTab失敗を、リンクへの到達とEnterでの実行に分けて調べる](./180-webkit-keyboard-activation-test-boundary.md)
+
+## profile-hubのPostgreSQLと公開API
+
+- [PostgreSQLへの変更でIDと日時の扱いを揃える](./181-postgresql-identity-and-timestamptz-migration.md)
+- [PostgreSQLテストの未実行をCIで成功扱いにしない](./182-postgresql-tests-fail-closed-in-ci.md)
+- [小さなスキーマ変更でも生成スナップショットが差分を増やす](./183-drizzle-snapshots-and-small-review-prs.md)
+- [公開ポートフォリオをセクションごとに取得する](./184-public-portfolio-filter-by-section.md)
+- [実際の公開APIに合わせたOpenAPIをOrvalで確認する](./185-live-openapi-response-contract-and-orval.md)
+- [CORSのプリフライトと通常のOPTIONSを区別する](./186-cors-preflight-header-and-browser-boundary.md)
+- [APIエラーとログに入力値を不用意に含めない](./187-safe-api-errors-validation-and-request-logs.md)
+- [Argon2idのパスワード処理をログイン機能と区別する](./188-argon2id-password-hash-is-not-login.md)
+- [JWTの必須クレーム検証と失効管理を分けて考える](./189-jwt-required-claims-versus-revocation.md)
+- [カバレッジ100%でも読み込まれていないファイルがあった](./190-bun-coverage-loaded-schema-boundary.md)
