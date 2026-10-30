@@ -295,3 +295,4 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 - [生成 API クライアントのヘッダーを通信境界で確認する](./193-generated-client-request-contract.md)
 - [Portfolio 作成 API で入力サイズと URL を検証する](./194-portfolio-write-boundaries.md)
 - [PostgreSQL BIGINT の ID を API の入力境界で検証する](./195-postgres-bigint-route-ids.md)
+- [並べ替えをセクション内の全件更新として扱う](./196-section-scoped-portfolio-reordering.md)
