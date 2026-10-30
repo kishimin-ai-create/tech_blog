@@ -293,3 +293,4 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 - [JWTの失効判定をセッションバージョンとDB照合に分ける](./191-session-version-revocation-boundaries.md)
 - [ブラウザーのセッション復元とログアウトの競合を扱う](./192-browser-session-logout-races.md)
 - [生成 API クライアントのヘッダーを通信境界で確認する](./193-generated-client-request-contract.md)
+- [Portfolio 作成 API で入力サイズと URL を検証する](./194-portfolio-write-boundaries.md)
