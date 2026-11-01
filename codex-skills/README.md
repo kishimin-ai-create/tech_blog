@@ -300,3 +300,4 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 - [セッション期限切れ時の読み取りと書き込みを分ける](./198-expired-session-read-write-retry.md)
 - [Secure Cookie のブラウザーテストを HTTPS で確かめる](./199-secure-cookie-browser-test-over-https.md)
 - [CI の Playwright がブラウザーを見つけられなかった原因](./200-playwright-workspace-browser-install.md)
+- [実行時に組み立てる API の配線を PostgreSQL で確かめる](./201-test-configured-api-wiring.md)
