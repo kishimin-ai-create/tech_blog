@@ -298,3 +298,4 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 - [並べ替えをセクション内の全件更新として扱う](./196-section-scoped-portfolio-reordering.md)
 - [一覧の取得元が変わったときに古い結果を表示しない](./197-filtered-list-stale-responses.md)
 - [セッション期限切れ時の読み取りと書き込みを分ける](./198-expired-session-read-write-retry.md)
+- [Secure Cookie のブラウザーテストを HTTPS で確かめる](./199-secure-cookie-browser-test-over-https.md)
