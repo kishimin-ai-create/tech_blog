@@ -302,3 +302,4 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 - [CI の Playwright がブラウザーを見つけられなかった原因](./200-playwright-workspace-browser-install.md)
 - [実行時に組み立てる API の配線を PostgreSQL で確かめる](./201-test-configured-api-wiring.md)
 - [API の接続先をホスト名とパスに分けてテストする](./202-api-origin-and-path-contract.md)
+- [セクション別一覧の取得条件とキャッシュを揃える](./203-section-scoped-query-validation.md)
