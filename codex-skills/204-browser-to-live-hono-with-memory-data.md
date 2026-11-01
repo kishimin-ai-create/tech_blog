@@ -19,3 +19,9 @@
 画面テストでネットワーク応答を差し替える場合、表示やエラー処理を手早く検証できる。別途、ブラウザーから実際の API ルートまでつなぐテストを置くと、パス、オリジン、CORS の配線を確認できる。どこから先をテスト用実装に置き換えたかを結果に書き、DB や本番環境の保証と混同しない。
 
 根拠: [実 Hono ルートを使う公開ブラウザーテスト #207](https://github.com/kishimin-ai-create/profile-hub/pull/207)。PR はドラフトで、夜間 CI の結果は実行ごとに確認が必要。
+
+## 追加検証：専用 PostgreSQL を通す
+
+後続の [#208](https://github.com/kishimin-ai-create/profile-hub/pull/208) では、夜間 CI に専用の空 PostgreSQL を用意し、マイグレーション後、設定済み Hono API とブラウザーを接続した。DB 必須モードで [夜間 CI](https://github.com/kishimin-ai-create/profile-hub/actions/runs/41359081745) の Chromium と WebKit が成功した。
+
+この追加検証は CI のテスト用 DB と設定での結果であり、本番環境を検証したものではない。ローカルでは PostgreSQL が利用できず、DB モードは実行していない。接続先診断の追加修正を含む後続コミットの CI は別途実行中。
