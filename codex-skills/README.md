@@ -305,3 +305,4 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 - [セクション別一覧の取得条件とキャッシュを揃える](./203-section-scoped-query-validation.md)
 - [公開画面から実際の Hono ルートを呼ぶブラウザーテスト](./204-browser-to-live-hono-with-memory-data.md)
 - [2つのセクションを混ぜない Home を下書きする](./205-home-design-from-separate-entry-points.md)
+- [テスト用 API にもセクション変更の契約を持たせる](./206-test-double-preserve-section-contract.md)
