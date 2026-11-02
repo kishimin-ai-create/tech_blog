@@ -25,3 +25,9 @@
 後続の [#208](https://github.com/kishimin-ai-create/profile-hub/pull/208) では、夜間 CI に専用の空 PostgreSQL を用意し、マイグレーション後、設定済み Hono API とブラウザーを接続した。DB 必須モードで [夜間 CI](https://github.com/kishimin-ai-create/profile-hub/actions/runs/41359081745) の Chromium と WebKit が成功した。
 
 この追加検証は CI のテスト用 DB と設定での結果であり、本番環境を検証したものではない。ローカルでは PostgreSQL が利用できず、DB モードは実行していない。接続先診断の追加修正を含む後続コミットも、[夜間 CI](https://github.com/kishimin-ai-create/profile-hub/actions/runs/41359321957) の全5ジョブが成功した。
+
+## 追加検証：両セクションのデータを用意する
+
+セクション間の混入を見つけるには、一方のデータだけを用意して「もう一方が表示されない」と確認するだけでは不十分である。[#216](https://github.com/kishimin-ai-create/profile-hub/pull/216) では Hobby と Engineering の両方に作品と連絡先を用意し、Engineering の作品表示と Hobby の作品が混入しないこと、Hobby の連絡先に Engineering のリンクが混入しないことを確認する。
+
+ローカルでは Hono とメモリーのデータを使った Chromium・WebKit の計4件が成功した。専用 PostgreSQL を使う CI は実行中であり、ローカルの結果だけで DB 経由の成功を主張しない。
