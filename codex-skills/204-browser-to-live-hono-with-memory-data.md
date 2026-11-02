@@ -24,4 +24,4 @@
 
 後続の [#208](https://github.com/kishimin-ai-create/profile-hub/pull/208) では、夜間 CI に専用の空 PostgreSQL を用意し、マイグレーション後、設定済み Hono API とブラウザーを接続した。DB 必須モードで [夜間 CI](https://github.com/kishimin-ai-create/profile-hub/actions/runs/41359081745) の Chromium と WebKit が成功した。
 
-この追加検証は CI のテスト用 DB と設定での結果であり、本番環境を検証したものではない。ローカルでは PostgreSQL が利用できず、DB モードは実行していない。接続先診断の追加修正を含む後続コミットの CI は別途実行中。
+この追加検証は CI のテスト用 DB と設定での結果であり、本番環境を検証したものではない。ローカルでは PostgreSQL が利用できず、DB モードは実行していない。接続先診断の追加修正を含む後続コミットも、[夜間 CI](https://github.com/kishimin-ai-create/profile-hub/actions/runs/41359321957) の全5ジョブが成功した。
