@@ -30,4 +30,4 @@
 
 セクション間の混入を見つけるには、一方のデータだけを用意して「もう一方が表示されない」と確認するだけでは不十分である。[#216](https://github.com/kishimin-ai-create/profile-hub/pull/216) では Hobby と Engineering の両方に作品と連絡先を用意し、Engineering の作品表示と Hobby の作品が混入しないこと、Hobby の連絡先に Engineering のリンクが混入しないことを確認する。
 
-ローカルでは Hono とメモリーのデータを使った Chromium・WebKit の計4件が成功した。専用 PostgreSQL を使う CI は実行中であり、ローカルの結果だけで DB 経由の成功を主張しない。
+ローカルでは Hono とメモリーのデータを使った Chromium・WebKit の計4件が成功した。さらに [夜間 CI](https://github.com/kishimin-ai-create/profile-hub/actions/runs/41549024294) では専用 PostgreSQL の使用を必須にし、両ブラウザーの計4件と全5ジョブが成功した。ローカルでは DB モードを実行しておらず、CI の成功も本番環境の検証ではない。
