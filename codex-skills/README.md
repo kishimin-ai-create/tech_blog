@@ -312,3 +312,5 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 - [Home のリンク名を表示文言と揃える](./207-home-link-visible-accessible-name.md)
 - [管理画面の取得エラーから再試行する](./208-retry-social-link-edit-load.md)
 - [共通の作品データに Hobby 専用カードを用意する](./209-hobby-project-variant.md)
+- [管理画面の配信元に robots.txt を置く](./210-admin-robots-origin.md)
+- [ページ遷移時のソーシャルカード情報を更新する](./211-client-social-metadata.md)
