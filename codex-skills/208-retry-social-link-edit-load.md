@@ -12,4 +12,6 @@ profile-hub の管理画面では、保存済みリンクを取得して編集�
 
 ## 検証と限界
 
-対象テスト、整形、型チェック、Lint、HTML 検査、ビルドが成功した。テストは通信をテスト用サーバーで再現しており、本番環境での通信障害を実演したものではない。CI と管理画面全体の検証結果は [PR #218](https://github.com/kishimin-ai-create/profile-hub/pull/218) で確認する。PR はドラフトで、main には未統合である。
+対象テスト、管理画面の118テスト、整形、型チェック、Lint、HTML 検査、ビルドが成功した。[統合 CI](https://github.com/kishimin-ai-create/profile-hub/actions/runs/41558199899) も全5ジョブ成功した。テストは通信をテスト用サーバーで再現しており、本番環境での通信障害を実演したものではない。[PR #218](https://github.com/kishimin-ai-create/profile-hub/pull/218) はドラフトで、main には未統合である。
+
+同じ操作が必要だったリンク一覧にも、別の [PR #219](https://github.com/kishimin-ai-create/profile-hub/pull/219) で再試行を追加した。こちらも失敗後に一覧へ戻るテストを用意し、全体検証を進めている。
