@@ -4,6 +4,9 @@ WindowsでのCodex CLI運用と、Codex・Claude Code間でユーザーSkillを�
 
 ## インストールとトラブルシュート
 
+- [Qiita CLIで投稿済み記事のIDがないときの同期](./210-qiita-cli-publish-id-sync.md)
+- [MUI Checkboxのinputが透明なときにDOMを検証する](./211-mui-checkbox-input-visibility.md)
+
 - [Codex CLIのインストールで`Get-FileHash`が見つからないときの切り分け](./01-codex-get-filehash-install-error.md)
 - [Codex CLIの同一バージョン更新成功ではダウンロードを検証できない](./80-codex-update-no-op-does-not-verify-download.md)
 - [WindowsでCodexの余分なターミナルを`--no-daemon`で切り分ける](./86-codex-no-daemon-windows-terminal.md)
