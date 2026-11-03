@@ -5,3 +5,5 @@ profile-hub の公開ページは5ルートだが、公開先のオリジンを�
 HTTP(S) のオリジン以外、認証情報、パス、クエリ、フラグメントを含む指定は拒否する。変数がない場合は架空の URL を出さず、サイトマップ自体を生成しない。公開環境では実際のオリジンをビルド環境へ設定する必要がある。
 
 `https://example.com` を指定したビルドで5 URL の出力を確認した。公開画面の61テスト、整形、型チェック、Lint、HTML 検査が成功した。PR はドラフトで、公開環境での設定と配信、prerender は未確認・未実装である。
+
+後続の [#225](https://github.com/kishimin-ai-create/profile-hub/pull/225) では、同じオリジンでサイトマップの場所を示す公開側 `robots.txt` を生成した。さらに [#226](https://github.com/kishimin-ai-create/profile-hub/pull/226) では、既知のルートに対して同じオリジンの canonical と `og:url` をクライアント側で設定する。未知のルートには出力しない。63テストとビルドが成功したが、canonical を初期 HTML に含めるには prerender が必要である。
