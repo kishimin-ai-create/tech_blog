@@ -306,3 +306,4 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 - [公開画面から実際の Hono ルートを呼ぶブラウザーテスト](./204-browser-to-live-hono-with-memory-data.md)
 - [2つのセクションを混ぜない Home を下書きする](./205-home-design-from-separate-entry-points.md)
 - [テスト用 API にもセクション変更の契約を持たせる](./206-test-double-preserve-section-contract.md)
+- [Home のリンク名を表示文言と揃える](./207-home-link-visible-accessible-name.md)
