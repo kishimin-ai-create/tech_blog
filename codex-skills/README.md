@@ -307,3 +307,4 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 - [2つのセクションを混ぜない Home を下書きする](./205-home-design-from-separate-entry-points.md)
 - [テスト用 API にもセクション変更の契約を持たせる](./206-test-double-preserve-section-contract.md)
 - [Home のリンク名を表示文言と揃える](./207-home-link-visible-accessible-name.md)
+- [管理画面の取得エラーから再試行する](./208-retry-social-link-edit-load.md)
