@@ -10,4 +10,4 @@ profile-hub の `SITE_ORIGIN` はサイトマップと canonical URL の生成�
 
 ## 検証と限界
 
-パスを含む `SITE_ORIGIN` で開発サーバーを起動すると、設定エラーを表示して終了した。正常なテスト用オリジンでビルドし、sitemap と robots.txt の検査が成功した。整形・型・Lint・HTML 検査と65テストも成功。PR はドラフトであり、本番環境の設定や配信は未確認である。
+パスを含む `SITE_ORIGIN` で開発サーバーを起動すると、設定エラーを表示して終了した。正常なテスト用オリジンでビルドし、sitemap と robots.txt の検査が成功した。整形・型・Lint・HTML 検査と65テスト、[統合 CI](https://github.com/kishimin-ai-create/profile-hub/actions/runs/41617069641) の全5ジョブも成功。PR はドラフトであり、本番環境の設定や配信は未確認である。
