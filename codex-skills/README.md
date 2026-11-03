@@ -315,3 +315,5 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 - [管理画面の配信元に robots.txt を置く](./210-admin-robots-origin.md)
 - [ページ遷移時のソーシャルカード情報を更新する](./211-client-social-metadata.md)
 - [公開 URL を設定してサイトマップを生成する](./212-configured-sitemap-origin.md)
+- [SEO の生成物を CI で確認する](./213-verify-generated-seo-assets.md)
+- [公開オリジンの誤りを起動時に検出する](./214-validate-origin-at-start.md)
