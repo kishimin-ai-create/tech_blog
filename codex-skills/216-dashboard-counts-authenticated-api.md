@@ -29,7 +29,7 @@
 - 管理画面のコンポーネントテストで認証ヘッダー、非ゼロ件数、空、失敗後の再試行を確認した。
 - [PR #244](https://github.com/kishimin-ai-create/profile-hub/pull/244)では、認証APIフィクスチャを使い、ChromiumとWebKitで空件数を確認した。
 - [PR #245](https://github.com/kishimin-ai-create/profile-hub/pull/245)では、読み込み状態にstatusロールを付け、ロールから確認するテストを追加した。スクリーンリーダー実機での読み上げは未確認である。
-- #239のNightlyは全ジョブ成功した。後続のNightlyは記事作成時点で実行中。
+- #239と[#245のNightly](https://github.com/kishimin-ai-create/profile-hub/actions/runs/41812081605)は全ジョブ成功した。
 
 ## つまずいたところ
 
