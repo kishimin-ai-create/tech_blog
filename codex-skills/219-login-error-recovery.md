@@ -26,7 +26,7 @@ MSWと実際のAPIクライアントを使い、401、500、ネットワーク�
 
 ### Step 3: 全体を確認する
 
-管理画面の全139テスト、型チェック、Lint、markup lint、リポジトリの整形チェックが成功。カバレッジはstatements 93.63%、branches 83.58%、functions 95.84%、lines 96.93%。ログイン・復元・ログアウトはChromiumとWebKitでも確認した。[Nightly CI](https://github.com/kishimin-ai-create/profile-hub/actions/runs/42022531962)は記事作成時点で実行中。
+管理画面の全139テスト、型チェック、Lint、markup lint、リポジトリの整形チェックが成功。カバレッジはstatements 93.63%、branches 83.58%、functions 95.84%、lines 96.93%。ログイン・復元・ログアウトはChromiumとWebKitでも確認した。[Nightly CI](https://github.com/kishimin-ai-create/profile-hub/actions/runs/42022531962)は全ジョブ成功。
 
 ## つまずいたところ
 
