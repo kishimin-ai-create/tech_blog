@@ -37,7 +37,7 @@
 - 公開画面の全66テストが成功。
 - 型検査、Lint、markup lint、リポジトリの整形チェックが成功。
 - カバレッジはstatements 90.86%、branches 92.36%、functions 98.33%、lines 92.70%。
-- [Nightly CI](https://github.com/kishimin-ai-create/profile-hub/actions/runs/42004671079)は記事作成時点で実行中。
+- [Nightly CI](https://github.com/kishimin-ai-create/profile-hub/actions/runs/42004671079)は全ジョブ成功。
 
 ## 再発防止
 
