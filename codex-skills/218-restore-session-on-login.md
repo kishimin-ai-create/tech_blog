@@ -26,7 +26,7 @@
 
 ### Step 3: 全体検証を行う
 
-管理画面の全体テスト、型チェック、Lint、markup lint、リポジトリの整形チェックが成功した。カバレッジはstatements 93.60%、branches 83.35%、functions 95.84%、lines 96.91%。[Nightly CI](https://github.com/kishimin-ai-create/profile-hub/actions/runs/42006703701)は記事作成時点で実行中。
+管理画面の全体テスト、型チェック、Lint、markup lint、リポジトリの整形チェックが成功した。カバレッジはstatements 93.60%、branches 83.35%、functions 95.84%、lines 96.91%。[Nightly CI](https://github.com/kishimin-ai-create/profile-hub/actions/runs/42006703701)は全ジョブ成功。
 
 ## つまずいたところ
 
