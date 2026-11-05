@@ -322,3 +322,4 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 - [React Queryの更新失敗で表示中の内容が消えた原因と解決方法](./217-react-query-refresh-failure.md)
 - [ログインURLを開いた既存セッションを復元する](./218-restore-session-on-login.md)
 - [ログイン失敗で認証エラーと通信障害の案内を分ける](./219-login-error-recovery.md)
+- [ログインフォームの重複送信を同期的に防ぐ](./220-guard-duplicate-login-submission.md)
