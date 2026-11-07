@@ -334,3 +334,4 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 - [キーボードによる並べ替えをブラウザーで確かめる](./229-keyboard-reorder-browser-testing.md)
 - [削除確認の取消と承認をブラウザーで検証する](./230-browser-delete-confirmation.md)
 - [管理画面の並べ替えと削除の完了を伝える](./231-admin-action-status.md)
+- [取得元の切り替え後に古い削除エラーが表示された原因と修正](./232-stale-delete-error-source.md)
