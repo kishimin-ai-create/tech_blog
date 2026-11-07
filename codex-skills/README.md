@@ -330,3 +330,4 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 - [空白だけの入力エラーをフォームの欄に関連付ける](./225-profile-form-field-errors.md)
 - [APIが受け付けた作品URLを公開画面でも扱う](./226-portfolio-url-contract.md)
 - [通信待ち中の再試行を重ねない](./227-paused-query-retry.md)
+- [作品画面の再試行で読み込み状態を伝える](./228-portfolio-loading-status.md)
