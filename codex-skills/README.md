@@ -331,3 +331,6 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 - [APIが受け付けた作品URLを公開画面でも扱う](./226-portfolio-url-contract.md)
 - [通信待ち中の再試行を重ねない](./227-paused-query-retry.md)
 - [作品画面の再試行で読み込み状態を伝える](./228-portfolio-loading-status.md)
+- [キーボードによる並べ替えをブラウザーで確かめる](./229-keyboard-reorder-browser-testing.md)
+- [削除確認の取消と承認をブラウザーで検証する](./230-browser-delete-confirmation.md)
+- [管理画面の並べ替えと削除の完了を伝える](./231-admin-action-status.md)
