@@ -335,3 +335,8 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 - [削除確認の取消と承認をブラウザーで検証する](./230-browser-delete-confirmation.md)
 - [管理画面の並べ替えと削除の完了を伝える](./231-admin-action-status.md)
 - [取得元の切り替え後に古い削除エラーが表示された原因と修正](./232-stale-delete-error-source.md)
+
+## 絵文字描画とお問い合わせフォーム
+
+- [Pillowでカラー絵文字を文字サイズに合わせて描く](./233-pillow-color-emoji-bitmap-scaling.md)
+- [Googleフォームを言語別に用意してお問い合わせを受ける](./234-google-forms-localized-contact-links.md)
