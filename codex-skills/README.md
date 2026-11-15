@@ -340,3 +340,4 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 
 - [Pillowでカラー絵文字を文字サイズに合わせて描く](./233-pillow-color-emoji-bitmap-scaling.md)
 - [Googleフォームを言語別に用意してお問い合わせを受ける](./234-google-forms-localized-contact-links.md)
+- [AppRunへ切り替える前にDockerイメージと画像生成を確認する](./235-verify-container-before-apprun-switch.md)
