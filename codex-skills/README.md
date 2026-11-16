@@ -341,3 +341,8 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 - [Pillowでカラー絵文字を文字サイズに合わせて描く](./233-pillow-color-emoji-bitmap-scaling.md)
 - [Googleフォームを言語別に用意してお問い合わせを受ける](./234-google-forms-localized-contact-links.md)
 - [AppRunへ切り替える前にDockerイメージと画像生成を確認する](./235-verify-container-before-apprun-switch.md)
+
+## 操作動画と画像生成の調査
+
+- [Playwrightのスマートフォン録画で画面の切れと結果の見落としを防ぐ](./236-playwright-video-crop-and-result.md)
+- [文字アートの標準画像が幅の上限を超えた原因](./237-standard-image-width-limit.md)
