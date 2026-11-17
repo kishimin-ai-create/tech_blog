@@ -346,3 +346,8 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 
 - [Playwrightのスマートフォン録画で画面の切れと結果の見落としを防ぐ](./236-playwright-video-crop-and-result.md)
 - [文字アートの標準画像が幅の上限を超えた原因](./237-standard-image-width-limit.md)
+
+## Pages公開とYouTube API
+
+- [Cloudflare PagesのGit連携でSPAの直接アクセスを確認する](./238-cloudflare-pages-git-spa-deployment.md)
+- [YouTube Data APIで動画の概要欄を編集するときの認証権限](./239-youtube-api-edit-scope-and-test-users.md)
