@@ -356,3 +356,5 @@ Codex CLIやSkillの仕様変更後は、公式資料と検証コマンドを再
 
 - [エラー本文を公開せずに画像アップロードの失敗を区別する](./240-classify-upload-errors-with-headers.md)
 - [Content-Lengthのない画像アップロードでサイズ上限を適用する](./241-bound-chunked-upload-requests.md)
+
+- [手動で解析するmultipartフォームをSwagger UIに表示する](./243-document-manual-multipart-in-openapi.md)
